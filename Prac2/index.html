@@ -2,42 +2,67 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Мир Музыкальной Музыки</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <h1>Мир Музыкальной Музыки</h1>
+    <div class="logo">
+        <div class="logo img">
+            <img src="logo.jpg" alt="Логотип сайта">
+        </div>
+        <div class="logo h1">
+            <h1>Wex</h1>
+        </div>
+    </div>
+
     <nav>
+        <!-- Навигационное меню -->
         <ul>
-            <li class="circle">Top недели</li>
-            <li>Bot недели</li>
-            <li>Тебе понравится</li>
-            <li>Плейлисты</li>
+            <ui>Top недели</ui>
+            <ui>Bot недели</ui>
+            <ui>Тебе понравится</ui>
         </ul>
     </nav>
+    <nav>
+        <ul>
+            <ui>Мои Плейлисты</ui>
+            <ui>Топ Плейлисты</ui>
+        </ul>
+    </nav>
+
 </header>
 
 <main>
     <article>
-        <h3>Top недели</h3>
-        <section>
-            <p>Я не боюсь ошибаться</p>
-            <p>Серега Пират</p></section>
-        <section>
-            <p>Лимон</p>
-            <p>Серега Пират</p>
+        <h2>🔥Top недели🔥</h2>
+
+        <section id="sectionFirst">
+            <cite>Я не боюсь ошибаться</cite>
+            <address>Серега Пират</address>
+            <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="top1.png" alt="обложка трека"></a>
         </section>
-        <section>
-            <p>Где моя нога?</p>
-            <p>Серега Пират</p>
+
+        <section id="sectionSecond">
+            <cite>Лимон</cite>
+            <address>Серега Пират</address>
+            <a href="https://www.youtube.com/watch?v=Vr-DOV-TP5s"><img src="top2.png" alt="обложка трека"></a>
         </section>
+
+        <section id="sectionThird">
+            <cite>Тп на аме</cite>
+            <address>Серега Пират</address>
+            <a href="https://www.youtube.com/watch?v=ocRN6Hz3LrI"><img src="top3.jpg" alt="обложка трека"></a>
+        </section>
+
         <aside>
-            <h3>Больше</h3>
-            <p>ФЫВ</p>
-            <p>АВЫ</p>
-            <p>ЫВАВЫ</p>
-            <p>авыаы</p>
+            <h3 class="h3Aside">Еще Больше</h3>
+            <pre><cite>Как же он силен</cite><address><sub>Серега Пират</sub></address></pre>
+            <img src="More1.png" alt="Image for More">
+            <pre><cite>Мой байк</cite><address><sub>Серега Пират</sub></address></pre>
+            <img src="more2jpg.jpg" alt="Image for More">
+            <pre><cite>Почему ты еще не фанат?</cite><address><sub>Серега Пират</sub></address></pre>
+            <img src="more3.jpg" alt="Image for More">
         </aside>
     </article>
 </main>

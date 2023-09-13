@@ -1,12 +1,140 @@
-p{
-    color: blue;
+header {
+    padding: 0px;
+    margin: 0px;
 }
 
-.circle{
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    color: red;
-    background-color: black;
+.logo {
+    position: relative; /* Нужно, чтобы дочерние элементы могли быть абсолютно позиционироваными относительно .logo */
+    background-color: #8401E3;
+    padding: 0;
+    margin: 0;
+
 }
-/*dcsa*/
+
+.logo img {
+    display: block; /*делаем его блочным*/
+    margin: auto; /* Центрируем изображение горизонтально */
+    width: 500px;
+    height: 300px;
+    opacity: 0.9;
+
+}
+
+.logo h1 {
+    position: absolute; /* Абсолютное позиционирование относительно .logo */
+    left: 50%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
+    transform: translate(850%, -600%); /* Смещение заголовка */
+    color: white; /* Цвет текста заголовка */
+    border: black;
+}
+
+ul {
+    display: flex;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+    background-color: blueviolet;
+
+}
+
+ui {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+
+    margin-left: 7%;
+    margin-right: 10%;
+
+    width: 20%;
+    transform: skew(15deg); /* наклонить прямоугольник*/
+
+}
+
+ui:hover {
+    transition: background-color 1s ease; /* Плавный переход для цвета заднего фона */
+    background-color: #8401E3;
+    clip-path: ellipse(100% 100%); /* Форма заднего фона в виде круга */
+    opacity: 0.7;
+
+
+}
+
+
+body {
+    background-color: #8401E3;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+section {
+    background-color: ghostwhite;
+    display: block; /*делаем его блочным*/
+    margin: auto; /* Центрируем изображение горизонтально */
+    width: 500px;
+    height: 100%;
+    margin-bottom: 20px;
+
+    transform: skew(15deg); /* наклонить прямоугольник*/
+
+    border: 8px solid;
+
+
+}
+
+#sectionFirst {
+    border-image: linear-gradient(to right, #69b7eb, deepskyblue) 1;
+}
+
+#sectionSecond {
+    border-image: linear-gradient(to right, #fedb37, #5d4a1f) 1;
+}
+
+#sectionThird {
+    border-image: linear-gradient(to right, honeydew, silver) 1;
+}
+
+section address::before {
+    content: "👤";
+}
+
+section cite::before {
+    content: "🎵";
+}
+
+section img {
+    display: block; /*делаем его блочным*/
+    margin: auto; /* Центрируем изображение горизонтально */
+    width: 500px;
+    height: 300px;
+    opacity: 0.9;
+}
+
+aside {
+    position: absolute; /* Абсолютное позиционирование относительно .logo */
+    left: 80%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
+    top: 130%;
+    color: white; /* Цвет текста заголовка */
+    /*border: 3px solid black;*/
+}
+
+.h3Aside {
+    font-size: 30px;
+    color: black;
+}
+
+aside pre {
+    margin: auto;
+    text-align: left;
+    margin-bottom: -17px;
+    margin-left: 50px;
+}
+
+aside img {
+    width: 40px;
+    height: 40px;
+    transform: translate(0%, -57%);
+    border-radius: 10px;
+}
