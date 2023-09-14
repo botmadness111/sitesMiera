@@ -55,10 +55,12 @@ ui:hover {
     background-color: #8401E3;
     clip-path: ellipse(100% 100%); /* Форма заднего фона в виде круга */
     opacity: 0.7;
-
-
 }
 
+ui a{
+    color: white;
+    text-decoration: none;
+}
 
 body {
     background-color: #8401E3;
@@ -94,6 +96,10 @@ section {
 
 #sectionThird {
     border-image: linear-gradient(to right, honeydew, silver) 1;
+}
+
+#linkA{
+    color: blue;
 }
 
 section address::before {
@@ -160,8 +166,8 @@ footer h2{
 
 .leftRight{
     display: flex;
-    gap: 31%;
+    gap: 25%;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 50px;
 }
 
