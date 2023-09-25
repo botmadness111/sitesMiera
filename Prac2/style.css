@@ -3,8 +3,16 @@ header {
     margin: 0px;
 }
 
+
+nav {
+    /*position: absolute; !* Задаем позиционирование как "relative" *!*/
+    position: static;
+
+}
+
 .logo {
     position: relative; /* Нужно, чтобы дочерние элементы могли быть абсолютно позиционироваными относительно .logo */
+    /*left: 100px;*/
     background-color: #8401E3;
     padding: 0;
     margin: 0;
@@ -12,7 +20,7 @@ header {
 }
 
 .logo img {
-    display: block; /*делаем его блочным*/
+    display: block; /*делаем его блочным Не даем другим элементам встать в эту ширину*/
     margin: auto; /* Центрируем изображение горизонтально */
     width: 500px;
     height: 300px;
@@ -20,12 +28,21 @@ header {
 
 }
 
+
 .logo h1 {
     position: absolute; /* Абсолютное позиционирование относительно .logo */
     left: 50%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
     transform: translate(850%, -600%); /* Смещение заголовка */
     color: white; /* Цвет текста заголовка */
     border: black;
+}
+
+.text {
+    position: sticky;
+    float: left;
+    margin-left: 50px;
+    top: 0; /* Прилипнет к верху экрана */
+    padding: 10px; /* Отступы вокруг текста */
 }
 
 ul {
@@ -57,7 +74,7 @@ ui:hover {
     opacity: 0.7;
 }
 
-ui a{
+ui a {
     color: white;
     text-decoration: none;
 }
@@ -96,9 +113,10 @@ section {
 
 #sectionThird {
     border-image: linear-gradient(to right, honeydew, silver) 1;
+    float: initial;
 }
 
-#linkA{
+#linkA {
     color: blue;
 }
 
@@ -145,29 +163,85 @@ aside img {
     border-radius: 10px;
 }
 
-aside img:active{
+aside img:active {
     transition: background-color 1s ease; /* Плавный переход для цвета заднего фона */
     background-color: #8401E3;
     clip-path: ellipse(100% 100%); /* Форма заднего фона в виде круга */
     opacity: 0.7;
 }
 
-footer{
+footer {
     background-color: mediumpurple;
     opacity: 0.8;
     direction: ltr;
     align-items: center;
- }
+}
 
-footer h2{
+footer h2 {
     align-items: center;
     margin-left: 120px;
 }
 
-.leftRight{
+.leftRight {
     display: flex;
     gap: 25%;
     align-items: center;
     margin-left: 50px;
 }
 
+#fixedImage {
+    position: fixed;
+    top: 35px;
+    left: 5px;
+    z-index: 9999;
+    width: 50px;
+    height: auto;
+}
+
+#divZ {
+    margin-top: 100px;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+#div1 {
+
+    position: inherit;
+    width: inherit; /*от родителя*/
+    height: inherit;
+
+    z-index: 1;
+    left: 0;
+    right: 0;
+    background-color: blue;
+}
+
+#div2 {
+    position: inherit;
+    width: inherit;
+    height: inherit;
+
+    z-index: 2;
+    left: 100px;
+    right: 100px;
+    background-color: green;
+}
+
+#div3 {
+    position: inherit;
+    width: inherit;
+    height: inherit;
+
+    z-index: 3;
+    left: 50px;
+    right: 150px;
+    background-color: red;
+}
+
+#imageFloat {
+    float: left;
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+}

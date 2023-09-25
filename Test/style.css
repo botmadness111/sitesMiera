@@ -1,0 +1,11 @@
+.container {
+    height: 2000px; /* Просто для демонстрации прокрутки */
+    position: relative;
+}
+
+.text {
+    position: sticky;
+    top: 100px; /* Вы можете настроить значение top по своему усмотрению */
+    background-color: white; /* Фон для текста */
+    padding: 10px; /* Отступы вокруг текста */
+}
