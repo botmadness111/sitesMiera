@@ -190,6 +190,91 @@
         <img src="fixedImage.jpg" alt="Image fixed" id="fixedImage">
     </aside>
 
+    <article>
+        <form method="get">
+            <p>
+                <label for="name">Введите имя:</label>
+                <input type="text" name="name" id="name" placeholder="Ваше реальное имя" required>
+            </p>
+            <p>
+                <label for="tel">Введите телефон:</label>
+                <input type="tel" name="tel" id="tel" required>
+            </p>
+            <p>
+                <label for="email">Введите email:</label>
+                <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                       required>
+            </p>
+            <p>
+                <label for="password">Введите пароль:</label>
+                <input type="password" name="password" id="password" required>
+            </p>
+            <p>
+                <label for="file">Выберите файл:</label>
+                <input type="file" name="file" id="file" accept="image/png" required>
+            </p>
+            <p>
+                <label for="checkbox">Вы уверены?</label>
+                <input type="checkbox" name="checkbox" id="checkbox" required>
+            </p>
+            <p>
+                <label for="radio">Выберите</label>
+                <input type="radio" name="radio" id="radio" checked="" required>
+            </p>
+            <p>
+                <label for="submit">Отправить</label>
+                <input type="submit" name="submit" id="submit" required>
+            </p>
+            <p>
+                <label for="datetime-local">Укажите дату</label>
+                <input type="date" name="datetime-local" id="datetime-local" min="2004-01-01" max="2005-01-01" required>
+            </p>
+        </form>
+
+        <div>
+            <label for="myTextarea"></label><textarea id="myTextarea" name="myTextarea" cols="30" rows="6"
+                                                      minlength="10"
+                                                      maxlength="200"
+                                                      placeholder="Введите текст..." required></textarea>
+
+            <button name="button">Проверить</button>
+
+
+            <form>
+                <label for="city-select">Выберите город</label>
+                <select name="city-select" id="city-select">
+                    <option>Moscow</option>
+                    <option>Spb</option>
+                </select>
+            </form>
+
+            <form>
+                <fieldset>
+                    <legend>Самый популярный артист?</legend>
+                    <label>
+                        <input type="radio" name="answer" value="Bascow">
+                        Басков
+                    </label>
+                    <label>
+                        <input type="radio" name="answer" value="Bilan">
+                        Билан
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49850.526958033766!2d-122.41941590646408!3d37.77492959736372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e3a2bac2fbf%3A0x539a9fb73a4b63fd!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1639514866869!5m2!1sen!2suk"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=T2aNrTrnFAw"></iframe>
+        </div>
+
+    </article>
+
+
 </main>
 
 <footer>
