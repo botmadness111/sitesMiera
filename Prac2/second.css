@@ -1,0 +1,40 @@
+header {
+    position: static;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.logo {
+    position: relative;
+    height: 100px;
+    border-bottom: 1px solid black;
+}
+
+.nameLogo {
+    position: absolute;
+    left: 45%;
+}
+
+main{
+    position: static;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.h2Name{
+    position: relative;
+    top:15px
+}
+
+
+main label{
+    /*position: relative;*/
+    /*display: block;*/
+    /*margin-top: 10%;*/
+}
+
+main fieldset{
+    position: relative;
+    display: block;
+    margin-top: 50px;
+}
