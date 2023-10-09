@@ -17,8 +17,7 @@ header {
 .logo {
     position: relative; /* Нужно, чтобы дочерние элементы могли быть абсолютно позиционироваными относительно .logo */
     background-color: #8401E3;
-    padding: 0;
-    margin: 0;
+    width: 100%;
 
 }
 
@@ -38,41 +37,117 @@ header {
     right: 5%; /* Располагаем заголовок справа на 5% относительно .logo */
     color: white; /* Цвет текста заголовка */
 }
-@media screen and (min-width: 1440px){
+
+
+.burgerIcon {
+    display: flex;
+    width: 35px;
+    height: 30px;
+    background-color: white;
+    left: 95%;
+    top: 320px;
+
+    position: relative;
+    cursor: pointer;
+
+    z-index: 3;
+}
+
+.burgerIcon::before, .burgerIcon::after {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 8px;
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.burgerIcon::before {
+    top: 0;
+    margin-top: 13%;
+    background-color: #8401E3;
+}
+
+.burgerIcon::after {
+    bottom: 0;
+    margin-bottom: 13%;
+    background-color: #8401E3;
+}
+
+.menu {
+    position: relative;
+    visibility: hidden;
+    display: none;
+    width: 120%;
+}
+
+#burgerCheckbox:checked + .burgerIcon::before {
+    transform: rotate(45deg) translate(6px, 6px);
+    background-color: white;
+}
+
+#burgerCheckbox:checked + .burgerIcon::after {
+    transform: rotate(-45deg) translate(6px, -6px);
+    background-color: white;
+}
+
+#burgerCheckbox:checked + .burgerIcon {
+    background-color: inherit;
+}
+
+#burgerCheckbox {
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+
+    #burgerCheckbox:checked ~ .menu {
+        visibility:visible;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
     nav {
         top: 320px;
         position: relative; /* относительно элемента - nav*/
         background-color: blueviolet;
         width: 100%;
         height: 200px;
+    }
+
+    .pLineSecond {
+        position: relative;
+        left: 180px;
     }
 }
 
-@media screen and (min-width: 1440px){
-    nav {
-        top: 320px;
-        position: relative; /* относительно элемента - nav*/
-        background-color: blueviolet;
-        width: 100%;
-        height: 200px;
+@media screen and (max-width: 1440px) {
+
+    #burgerCheckbox:checked ~ .menu {
+        visibility:visible;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
     }
-}
-@media screen and (max-width: 1440px){
+
     nav {
         display: flex;
         flex-wrap: wrap; /*перенос на след строку*/
-        flex-direction: row; /*основная ось-слева направо, поперечная - сверху вниз*/
-        justify-content: space-around; /*выравниает освновную ось*/
+        flex-direction: column; /*основная ось-слева направо, поперечная - сверху вниз*/
+        justify-content: space-between; /*выравниает освновную ось*/
         align-items: stretch; /*выравниает по поперечной оси внутри контейнера*/ /*по умолчанию вдоль всей высоты*/
         align-content: space-around; /*выравниает по поперченой оси между рядами flex*/
-        gap: 0; /*отступы между строками и стоблцами*/
+        row-gap: 30px; /*отступы между строками и стоблцами*/
 
         top: 320px;
         position: relative; /* относительно элемента - nav*/
         background-color: blueviolet;
         width: 100%;
-        height: 200px;
+        height: 700px;
     }
+
 }
 
 
@@ -86,14 +161,6 @@ nav p {
 
 
     transform: skew(15deg); /* наклонить прямоугольник*/
-}
-
-.pLineSecond {
-    position: relative;
-    margin: auto;
-    top: 20px;
-    left: 185px;
-
 }
 
 nav p a {
@@ -112,6 +179,16 @@ main {
     position: static;
     margin-top: 25%;
     font-size: 15px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+    main {
+        position: static;
+        margin-top: 35%;
+        font-size: 15px;
+        width: 100%;
+    }
 }
 
 .topWeek {
@@ -119,6 +196,7 @@ main {
 }
 
 #h2TopWeek {
+
     margin-left: 37%;
     position: relative;
     font-size: 30px;
@@ -246,19 +324,27 @@ aside img:active {
 .botWeek {
     position: relative; /* относительно него могут позицинироваться элементы из списка Top*/
 }
+@media screen and (min-width: 1440px) {
+    .flexClass {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /*переход на новую строку в случае перезаполнения*/
+        justify-content: space-around; /*одинаковые размеры с краев*/
+    }
 
-.flexClass {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /*переход на новую строку в случае перезаполнения*/
-    justify-content: space-around; /*одинаковые размеры с краев*/
 }
 
+@media screen and (max-width: 1440px) {
+    .flexClass {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; /*переход на новую строку в случае перезаполнения*/
+        justify-content: space-around; /*одинаковые размеры с краев*/
+    }
+}
 #flexItem1 {
-    /*flex-grow: 2; !*позволяет занять в два раза больше место чем соседи*!*/
-    /*flex-shrink: 0; !*наоборот, сжиает*!*/
-    /*order: 2; !*меняет порядок элементов*!*/
     flex-basis: 100%; /*занимает место еще до того как свободное место будет распределено*/
     width: 100%;
 }
@@ -306,9 +392,20 @@ aside img:active {
 
 
 footer {
+
     position: static;
     background-color: mediumpurple;
     opacity: 0.8;
+}
+
+@media screen and (max-width: 1440px) {
+    footer {
+        width: 120%;
+
+        position: static;
+        background-color: mediumpurple;
+        opacity: 0.8;
+    }
 }
 
 footer h2 {
