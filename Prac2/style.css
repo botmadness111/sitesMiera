@@ -8,18 +8,6 @@ header {
 
 }
 
-b {
-    position: sticky;
-    top: 0;
-}
-
-#b1 {
-    font-size: 2em; /* относительно размера родителя (main)*/
-}
-
-#b2 {
-    font-size: 2rem; /* относительно самого своего же размера*/
-}
 
 .textB {
     position: absolute;
@@ -50,14 +38,43 @@ b {
     right: 5%; /* Располагаем заголовок справа на 5% относительно .logo */
     color: white; /* Цвет текста заголовка */
 }
-
-nav {
-    top: 320px;
-    position: relative; /* относительно элемента - nav*/
-    background-color: blueviolet;
-    width: 100%;
-    height: 200px;
+@media screen and (min-width: 1440px){
+    nav {
+        top: 320px;
+        position: relative; /* относительно элемента - nav*/
+        background-color: blueviolet;
+        width: 100%;
+        height: 200px;
+    }
 }
+
+@media screen and (min-width: 1440px){
+    nav {
+        top: 320px;
+        position: relative; /* относительно элемента - nav*/
+        background-color: blueviolet;
+        width: 100%;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 1440px){
+    nav {
+        display: flex;
+        flex-wrap: wrap; /*перенос на след строку*/
+        flex-direction: row; /*основная ось-слева направо, поперечная - сверху вниз*/
+        justify-content: space-around; /*выравниает освновную ось*/
+        align-items: stretch; /*выравниает по поперечной оси внутри контейнера*/ /*по умолчанию вдоль всей высоты*/
+        align-content: space-around; /*выравниает по поперченой оси между рядами flex*/
+        gap: 0; /*отступы между строками и стоблцами*/
+
+        top: 320px;
+        position: relative; /* относительно элемента - nav*/
+        background-color: blueviolet;
+        width: 100%;
+        height: 200px;
+    }
+}
+
 
 nav p {
     position: relative;
@@ -175,12 +192,25 @@ section img {
     position: relative;
 }
 
-aside {
-    position: absolute; /* Абсолютное позиционирование относительно div_class=topWeek*/
-    left: 80%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
-    top: 40%;
-    color: white; /* Цвет текста заголовка */
-    /*border: 3px solid black;*/
+@media screen and (min-width: 1440px) {
+    aside {
+        position: absolute; /* Абсолютное позиционирование относительно div_class=topWeek*/
+        left: 80%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
+        top: 40%;
+        color: white; /* Цвет текста заголовка */
+        /*border: 3px solid black;*/
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    aside {
+        visibility: hidden;
+        position: absolute; /* Абсолютное позиционирование относительно div_class=topWeek*/
+        left: 80%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
+        top: 40%;
+        color: white; /* Цвет текста заголовка */
+        /*border: 3px solid black;*/
+    }
 }
 
 
@@ -217,16 +247,13 @@ aside img:active {
     position: relative; /* относительно него могут позицинироваться элементы из списка Top*/
 }
 
-@media screen and (max-width: 1600px){
-    .flexClass {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap; /*переход на новую строку в случае перезаполнения*/
-        justify-content: space-around; /*одинаковые размеры с краев*/
-
-    }
+.flexClass {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /*переход на новую строку в случае перезаполнения*/
+    justify-content: space-around; /*одинаковые размеры с краев*/
 }
-
 
 #flexItem1 {
     /*flex-grow: 2; !*позволяет занять в два раза больше место чем соседи*!*/
@@ -255,6 +282,7 @@ aside img:active {
     flex-basis: 20%; /*занимает место еще до того как свободное место будет распределено*/
     width: 100%;
 }
+
 
 .flexClass section {
     width: 250px;
@@ -295,16 +323,6 @@ footer h2 {
     gap: 25%;
     align-items: center;
     margin-left: 50px;
-}
-
-#fixedImage {
-    position: fixed;
-    top: 35px;
-    left: 5px;
-    z-index: 9999;
-    width: 3vw; /* процентное отношение относительно окна просмотра*/
-    height: auto;
-
 }
 
 
