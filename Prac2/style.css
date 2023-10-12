@@ -103,7 +103,7 @@ header {
 @media screen and (min-width: 1440px) {
 
     #burgerCheckbox:checked ~ .menu {
-        visibility:visible;
+        visibility: visible;
         display: flex;
         flex-wrap: wrap;
         align-content: space-around;
@@ -127,7 +127,7 @@ header {
 @media screen and (max-width: 1440px) {
 
     #burgerCheckbox:checked ~ .menu {
-        visibility:visible;
+        visibility: visible;
         display: flex;
         flex-wrap: wrap;
         align-content: space-around;
@@ -207,7 +207,6 @@ section {
     position: relative;
     background-color: ghostwhite;
     display: block; /*делаем его блочным*/
-    /*margin: auto; !* Центрируем изображение горизонтально *!*/
     width: 500px;
     height: 100%;
 
@@ -254,6 +253,50 @@ section img {
     opacity: 0.9;
 }
 
+#sectionFirst:hover .textImage {
+    transition: opacity;
+    opacity: 0.7;
+    transition-delay: 0.3s;
+    transition-duration: 0.8s;
+
+    transform: scale(1.2);
+}
+
+.textImage {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    opacity: 0;
+}
+
+.textImage::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    background-color: #fedb37;
+    height: 20px;
+    z-index: -1;
+}
+
+#sectionFirst:hover .textImage::before {
+    transition: width;
+    width: 100%;
+    transition-delay: 0.3s;
+    transition-duration: 1s;
+
+}
+
+section:hover cite {
+    visibility: visible;
+    animation-timing-function: linear;
+
+}
+
+section:hover address {
+    visibility: visible;
+}
+
+
 #imageSmile {
     z-index: 2; /* можем поменять на -1*/
 
@@ -266,6 +309,37 @@ section img {
     position: absolute;
 }
 
+.video{
+    margin-left: 400px;
+    background-color: #8401E3;
+}
+.textVideo{
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    color: red;
+    top:-100px;
+    opacity: 0;
+}
+
+.textVideo::before{
+    content: "";
+    width: 280px;
+    height: 50px;
+    position: absolute;
+    background: #6ea8da;
+    opacity: 0.3;
+}
+
+#flexItem1:hover .textVideo{
+    transition: opacity 300ms, ease-in-out, 1s;
+    opacity: 1;
+}
+
+#flexItem1:hover .textVideo::before{
+    transition: background-color 300ms, ease-in-out, 5s;
+    background-color: red;
+}
 
 .maybeLike {
     position: relative;
@@ -325,6 +399,7 @@ aside img:active {
 .botWeek {
     position: relative; /* относительно него могут позицинироваться элементы из списка Top*/
 }
+
 @media screen and (min-width: 1440px) {
     .flexClass {
         position: relative;
@@ -345,6 +420,7 @@ aside img:active {
         justify-content: space-around; /*одинаковые размеры с краев*/
     }
 }
+
 #flexItem1 {
     flex-basis: 100%; /*занимает место еще до того как свободное место будет распределено*/
     width: 100%;
@@ -446,17 +522,40 @@ textarea:focus {
     overflow: hidden;
     cursor: pointer;
     margin-right: 10px;
+    text-align: center;
 }
-#button1:hover{
-    transition: background-color 1s ease; /* Плавный переход для цвета заднего фона */
+
+#button1:hover {
+    transition: background-color 10s ease 10s; /* Плавный переход для цвета заднего фона */
     transform: revert;
     opacity: 0.7;
 }
 
-#button4:hover{
-    transition: background-color 1s ease; /* Плавный переход для цвета заднего фона */
-    transform: revert;
-    opacity: 0.7;
+#button2:hover {
+    transform: translate(10px, 30px) rotateY(10deg);
+}
+
+#button1:active ~ .musicBoard {
+    display: flex;
+}
+
+#button3:hover {
+    transform: scale(3);
+    box-shadow: 0 0px 10px red;
+}
+
+#button4:hover {
+    transition-property: background-color; /*плавность изменения*/
+    transition-duration: 0.3s; /*длительность перехода*/
+    transition-timing-function: ease-in-out; /*функция описывающая скорость измекнения свойства*/
+    transition-delay: 0.2s; /*задержка перед началом изменения*/
+    width: 100px;
+
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    cursor: pointer;
+
 }
 
 .button span {
@@ -468,7 +567,6 @@ textarea:focus {
     content: "";
     position: absolute;
     background-color: rgba(255, 255, 255, 0.4);
-    transition: all 0.3s ease;
 }
 
 .button::before {
@@ -479,8 +577,9 @@ textarea:focus {
     transform: skewY(40deg);
 }
 
-.musicBoard{
-    display: flex;
+
+.musicBoard {
+    display: none;
     flex-wrap: nowrap; /*перенос на след строку*/
     flex-direction: column; /*основная ось-слева направо, поперечная - сверху вниз*/
     justify-content: space-around; /*выравниает освновную ось*/
@@ -497,7 +596,7 @@ textarea:focus {
 
 }
 
-.musicList{
+.musicList {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -508,7 +607,7 @@ textarea:focus {
 
 }
 
-.musicItem{
+.musicItem {
     position: relative;
     display: inline-block;
     margin-left: 5%;
