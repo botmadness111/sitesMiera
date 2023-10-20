@@ -221,6 +221,98 @@ section {
 
 }
 
+@keyframes no-info {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 80%;
+        filter: blur(0px);
+    }
+}
+
+.infoSection {
+    display: flex;
+    position: absolute;
+    background-color: silver;
+    top: 30%;
+    left: -10%;
+    width: 120%;
+    height: 40%;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+}
+
+.infoSection:hover {
+    animation-name: no-info;
+    animation-duration: 5s;
+}
+
+@keyframes left-right-square {
+    from {
+        top: 0;
+        left: 100%;
+    }
+
+    50%{
+        left: 50%;
+    }
+
+    to {
+        top: 0;
+        left: 0;
+    }
+}
+
+.infoSection::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: red;
+    background-color: red;
+    z-index: 3;
+}
+
+.infoSection:hover::before{
+    animation-name: left-right-square;
+    animation-duration: 5s;
+}
+
+@keyframes right-left-square {
+    from {
+        bottom: 0;
+        right: 100%;
+    }
+
+    50%{
+        right: 50%;
+    }
+
+    to {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.infoSection::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: red;
+    background-color: red;
+    z-index: 3;
+}
+
+.infoSection:hover::after{
+    animation-name: right-left-square;
+    animation-duration: 5s;
+}
+
 #sectionFirst {
     border-image: linear-gradient(to right, #69b7eb, deepskyblue) 1;
 }
@@ -309,20 +401,21 @@ section:hover address {
     position: absolute;
 }
 
-.video{
+.video {
     margin-left: 400px;
     background-color: #8401E3;
 }
-.textVideo{
+
+.textVideo {
     font-size: 30px;
     position: relative;
     text-align: center;
     color: red;
-    top:-100px;
+    top: -100px;
     opacity: 0;
 }
 
-.textVideo::before{
+.textVideo::before {
     content: "";
     width: 280px;
     height: 50px;
@@ -331,12 +424,12 @@ section:hover address {
     opacity: 0.3;
 }
 
-#flexItem1:hover .textVideo{
+#flexItem1:hover .textVideo {
     transition: opacity 300ms, ease-in-out, 1s;
     opacity: 1;
 }
 
-#flexItem1:hover .textVideo::before{
+#flexItem1:hover .textVideo::before {
     transition: background-color 300ms, ease-in-out, 5s;
     background-color: red;
 }
@@ -526,7 +619,7 @@ textarea:focus {
 }
 
 #button1:hover {
-    transition: background-color 10s ease 10s; /* Плавный переход для цвета заднего фона */
+    /*transition: background-color 10s ease 10s; !* Плавный переход для цвета заднего фона *!*/
     transform: revert;
     opacity: 0.7;
 }
@@ -535,8 +628,11 @@ textarea:focus {
     transform: translate(10px, 30px) rotateY(10deg);
 }
 
-#button1:active ~ .musicBoard {
+#button1:hover ~ .musicBoard {
     display: flex;
+
+    height: 200px;
+    width: 20%;
 }
 
 #button3:hover {
@@ -546,7 +642,7 @@ textarea:focus {
 
 #button4:hover {
     transition-property: background-color; /*плавность изменения*/
-    transition-duration: 0.3s; /*длительность перехода*/
+    transition-duration: 0.9s; /*длительность перехода*/
     transition-timing-function: ease-in-out; /*функция описывающая скорость измекнения свойства*/
     transition-delay: 0.2s; /*задержка перед началом изменения*/
     width: 100px;
@@ -579,7 +675,7 @@ textarea:focus {
 
 
 .musicBoard {
-    display: none;
+    display: flex;
     flex-wrap: nowrap; /*перенос на след строку*/
     flex-direction: column; /*основная ось-слева направо, поперечная - сверху вниз*/
     justify-content: space-around; /*выравниает освновную ось*/
@@ -590,9 +686,13 @@ textarea:focus {
     position: relative; /* относительно элемента - nav*/
     color: white;
     background-color: black;
-    width: 25%;
+    width: 200px;
     border-radius: 30px;
-    height: 200px;
+    height: 100px;
+
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.9s;
 
 }
 
