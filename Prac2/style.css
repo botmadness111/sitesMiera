@@ -91,7 +91,7 @@ header {
         width: 20%;
         height: 20%;
     }
-    to{
+    to {
         top: -3%;
         left: -3%;
         width: 105%;
@@ -317,7 +317,7 @@ section {
     background-color: whitesmoke;
     top: 30%;
     left: -10%;
-    width: 120%;
+    width: calc(100% + 20%);
     height: 40%;
     align-items: center;
     justify-content: space-around;
@@ -625,9 +625,32 @@ aside img:active {
     width: 100%;
 }
 
+@keyframes cardAnimation {
+    from {
+        filter: blur(5px);
+    }
+    to {
+        filter: blur(5px);
+    }
+}
+
 #flexItem2 {
     flex-basis: 20%; /*занимает место еще до того как свободное место будет распределено*/
     width: 100%;
+}
+
+.flexClass section:hover {
+    transition: width 300ms, ease-in-out, 0.02s;
+    color: red;
+    transform: translate(10px);
+    width: 500px;
+    filter: contrast(250%);
+
+}
+
+.flexClass section:hover ~ section{
+    animation-name: cardAnimation;
+    animation-duration: 10s;
 }
 
 #flexItem3 {
