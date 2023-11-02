@@ -157,7 +157,7 @@ header {
     position: relative;
     visibility: hidden;
     display: none;
-    width: 120%;
+    width: 100%;
 }
 
 #burgerCheckbox:checked + .burgerIcon::before {
@@ -253,26 +253,18 @@ nav p:hover {
     opacity: 0.7;
 }
 
-
 main {
     position: static;
-    margin-top: 25%;
+    margin-top: 35%;
     font-size: 15px;
     width: 100%;
 }
 
-@media screen and (max-width: 1440px) {
-    main {
-        position: static;
-        margin-top: 35%;
-        font-size: 15px;
-        width: 100%;
-    }
-}
-
 .topWeek {
+    display: block;
     position: relative; /* относительно него могут позицинироваться элементы из списка Top*/
 }
+
 
 #h2TopWeek {
 
@@ -286,7 +278,6 @@ section {
     background-color: ghostwhite;
     display: block; /*делаем его блочным*/
     width: 500px;
-    height: 100%;
 
 
     margin-left: 28%;
@@ -550,25 +541,12 @@ section:hover address {
     position: relative;
 }
 
-@media screen and (min-width: 1440px) {
-    aside {
-        position: absolute; /* Абсолютное позиционирование относительно div_class=topWeek*/
-        left: 80%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
-        top: 40%;
-        color: white; /* Цвет текста заголовка */
-        /*border: 3px solid black;*/
-    }
-}
-
-@media screen and (max-width: 1440px) {
-    aside {
-        visibility: hidden;
-        position: absolute; /* Абсолютное позиционирование относительно div_class=topWeek*/
-        left: 80%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
-        top: 40%;
-        color: white; /* Цвет текста заголовка */
-        /*border: 3px solid black;*/
-    }
+aside {
+    position: absolute; /* Абсолютное позиционирование относительно div_class=topWeek*/
+    left: 80%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
+    top: 40%;
+    color: white; /* Цвет текста заголовка */
+    /*border: 3px solid black;*/
 }
 
 
@@ -605,26 +583,46 @@ aside img:active {
     position: relative; /* относительно него могут позицинироваться элементы из списка Top*/
 }
 
-@media screen and (min-width: 1440px) {
+.flexClass {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap; /*переход на новую строку в случае перезаполнения*/
+    justify-content: space-around; /*одинаковые размеры с краев*/
+
+    display: grid;
+
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+
+    grid-auto-flow: row; /* бразуер сам заполняет пустые ячейке в разметке*/
+
+    justify-items: stretch; /*растягивает элемент на всю ширину грид-ячейки*/
+
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
     .flexClass {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; /*переход на новую строку в случае перезаполнения*/
-        justify-content: space-around; /*одинаковые размеры с краев*/
+        grid-template-columns: auto;
     }
 
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 769px) {
     .flexClass {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap; /*переход на новую строку в случае перезаполнения*/
-        justify-content: space-around; /*одинаковые размеры с краев*/
+        grid-template-columns: auto;
     }
+
 }
+
+@media screen and (min-width: 1080px) {
+    .flexClass {
+        grid-template-columns: auto auto;
+    }
+
+}
+
 
 #flexItem1 {
     flex-basis: 100%; /*занимает место еще до того как свободное место будет распределено*/
@@ -699,6 +697,97 @@ aside img:active {
 }
 
 .playListDay {
+    width: 100%;
+}
+
+.playListDay .gridClass {
+    display: grid;
+
+    grid-template-columns: [start] 250px [line2] 400px [line3] 150px [end];
+    grid-template-rows: [start] 200px [row1] 200px [row2] 200px [end];
+    /*grid-template-columns: auto auto auto;*/
+    /*grid-template-rows: auto auto auto;*/
+
+    grid-auto-flow: row; /* бразуер сам заполняет пустые ячейке в разметке*/
+
+    justify-content: center;
+    justify-items: stretch; /*растягивает элемент на всю ширину грид-ячейки*/
+
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    .playListDay .gridClass {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+    .playListDay .gridClass {
+        grid-template-columns: [start] 250px [line2] 150px [end];
+        grid-template-rows: [start] 200px [row1] 200px [row2] 200px [end];
+    }
+
+    #card1 {
+        grid-row: span 1;
+    }
+
+    #card2 {
+        grid-column: span 1;
+    }
+
+
+    #card3 {
+        grid-column: span 1;
+    }
+
+    #card6 {
+        grid-row: span 1;
+    }
+
+    #card7 {
+        grid-column: span 1;
+    }
+
+    #card8 {
+        grid-column: span 1;
+    }
+
+}
+
+@media screen and (min-width: 1080px) {
+    .playListDay .gridClass {
+        grid-template-columns: [start] 250px [line2] 400px [line3] 150px [end];
+        grid-template-rows: [start] 200px [row1] 200px [row2] 200px [end];
+    }
+
+    #card1 {
+        grid-row: span 2;
+    }
+
+    #card2 {
+        grid-column: span 2;
+    }
+
+
+    #card3 {
+        grid-column: span 2;
+    }
+
+    #card6 {
+        grid-row: span 2;
+    }
+
+    #card7 {
+        grid-column: span 2;
+    }
+
+    #card8 {
+        grid-column: span 3;
+    }
 
 }
 
@@ -710,8 +799,8 @@ aside img:active {
 
 .cardPlayList {
     position: relative;
-    width: 200px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
 
     border: 5px solid;
@@ -723,14 +812,15 @@ aside img:active {
     cursor: pointer;
 }
 
+
 @keyframes cardPlayListAnimationBorder {
-    from{
+    from {
         border-image-source: linear-gradient(#ff0000, #00ff00);
     }
-    50%{
+    50% {
         border-image-source: linear-gradient(#00ff00, #ff0000);
     }
-    to{
+    to {
         border-image-source: linear-gradient(#ff0000, #00ff00);
     }
 }
@@ -742,8 +832,6 @@ aside img:active {
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
-
-
 
 
 .cardPlayList:before {
@@ -778,28 +866,90 @@ aside img:active {
 
 
 footer {
-
     position: static;
     background-color: mediumpurple;
     opacity: 0.8;
 }
 
-@media screen and (max-width: 1440px) {
-    footer {
-        width: 120%;
-
-        position: static;
-        background-color: mediumpurple;
-        opacity: 0.8;
-    }
-}
 
 footer h2 {
     margin-left: 37%;
     position: relative;
     font-size: 30px;
 
+
 }
+
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 20px;
+}
+
+.footer h3 {
+    font-size: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.footer a:hover {
+    transform: scale(1.5);
+}
+
+/* Псевдоэлементы для декорации */
+
+
+.footer-info h3::before {
+    content: "\1F3E1";
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.footer-about h3::before {
+    content: "\1F4BB";
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.footer-links h3::before {
+    content: "\1F517";
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
+/* Адаптив для широких экранов (1001px и более) */
+@media screen and (min-width: 1001px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* Адаптив для средних экранов (769px - 1000px) */
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптив для узких экранов (320px - 768px) */
+@media screen and (max-width: 320px) {
+    .footer-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 .leftRight {
     display: flex;
@@ -877,5 +1027,32 @@ input::placeholder {
     color: #999;
     font-size: 140px;
 }
+
+
+/*.gallery {*/
+/*    display: grid;*/
+/*    !*grid-template-columns:  repeat(4, 1fr);*!*/
+/*    grid-template-columns: [start] 250px [line2] 400px [line3] 600px;*/
+/*    grid-template-rows: [row1-start] 150px [row1-end] 300px [last];*/
+/*    gap: 10px;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*.image {*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    border: 1px solid #ccc;*/
+/*    transition: transform 0.3s;*/
+/*}*/
+
+/*.image img {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    display: block;*/
+/*}*/
+
+/*.image:hover {*/
+/*    transform: scale(1.05);*/
+/*}*/
 
 
