@@ -19,20 +19,20 @@
             <h1>Wex</h1>
         </div>
 
-<!--        <form action="" method="get" name="mainForm">-->
-<!--            &lt;!&ndash; action - ссылка на скрипт, который обработает поданные данные&ndash;&gt;-->
-<!--            <fieldset>-->
-<!--                <legend>Введите Email</legend>-->
-<!--                <label for="email"> </label>-->
-<!--                <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"-->
-<!--                       required>-->
-<!--            </fieldset>-->
-<!--            <fieldset>-->
-<!--                <legend>Придумайте пароль</legend>-->
-<!--                <label for="password"></label>-->
-<!--                <input type="password" name="password" id="password" required>-->
-<!--            </fieldset>-->
-<!--        </form>-->
+        <!--        <form action="" method="get" name="mainForm">-->
+        <!--            &lt;!&ndash; action - ссылка на скрипт, который обработает поданные данные&ndash;&gt;-->
+        <!--            <fieldset>-->
+        <!--                <legend>Введите Email</legend>-->
+        <!--                <label for="email"> </label>-->
+        <!--                <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"-->
+        <!--                       required>-->
+        <!--            </fieldset>-->
+        <!--            <fieldset>-->
+        <!--                <legend>Придумайте пароль</legend>-->
+        <!--                <label for="password"></label>-->
+        <!--                <input type="password" name="password" id="password" required>-->
+        <!--            </fieldset>-->
+        <!--        </form>-->
 
         <input type="checkbox" id="burgerCheckbox">
         <label for="burgerCheckbox" class="burgerIcon"></label>
@@ -66,18 +66,67 @@
                 <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="top1.png" alt="обложка трека"></a>
                 <div class="infoSection">
                     Тут может быть информация о треке
-                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="Youtube%20.png" alt="лого ютуба"></a>
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="Youtube%20.png"
+                                                                               alt="лого ютуба"></a>
                     <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="tg.png" alt="лого телеграма"></a>
                     <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="vk.png" alt="лого vk"></a>
                 </div>
             </section>
+
+
+            <div class="butLike">
+                <button id="likeButton" class="like-button">Нравится</button>
+                <script>
+                    likeButton = document.getElementById("likeButton");
+
+                    likeButton.addEventListener("click", () => {
+                        likeButton.classList.toggle("active");
+                    });
+                </script>
+
+            </div>
+
+
+            <div id="drawingArea">
+
+
+                <script>
+                    const drawingArea = document.getElementById("drawingArea");
+                    let isDrawing = false;
+
+                    drawingArea.addEventListener("mousedown", (e) => {
+                        isDrawing = true;
+                    });
+
+                    drawingArea.addEventListener("mousemove", (e) => {
+                        if (isDrawing) {
+                            createDrawingElement(e.clientX, e.clientY);
+                        }
+                    });
+
+                    drawingArea.addEventListener("mouseup", () => isDrawing = false);
+
+                    function createDrawingElement(x, y) {
+                        const drawingElement = document.createElement("img");
+                        drawingElement.className = "drawingElement";
+                        drawingElement.style.left = x - 20 + "px";
+                        drawingElement.style.top = y - 300 + "px";
+                        drawingElement.src="tg.png"
+                        drawingArea.appendChild(drawingElement);
+                    }
+
+                </script>
+
+            </div>
+
 
             <section id="sectionSecond">
                 <cite>Лимон</cite>
                 <address>Серега Пират</address>
                 <a href="https://www.youtube.com/watch?v=Vr-DOV-TP5s"><img src="top2.png" alt="обложка трека"></a>
                 <div class="infoSection">Тут может быть информация о треке
-                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="Youtube%20.png" alt="лого ютуба"></a>
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="Youtube%20.png"
+                                                                               alt="лого ютуба"></a>
                     <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="tg.png" alt="лого телеграма"></a>
                     <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="vk.png" alt="лого vk"></a>
                 </div>
@@ -88,13 +137,13 @@
                 <address>Серега Пират</address>
                 <a href="https://www.youtube.com/watch?v=ocRN6Hz3LrI"><img src="top3.jpg" alt="обложка трека"></a>
                 <div class="infoSection">Тут может быть информация о треке
-                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="Youtube%20.png" alt="лого ютуба"></a>
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="Youtube%20.png"
+                                                                               alt="лого ютуба"></a>
                     <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="tg.png" alt="лого телеграма"></a>
                     <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="vk.png" alt="лого vk"></a>
                 </div>
             </section>
         </div>
-
 
 
         <!--<aside>
@@ -112,13 +161,13 @@
         <h2 id="h2BotWeek">🔥Худшее недели🔥</h2>
         <div class="flexClass">
 
-<!--            <section id="flexItem1">-->
-<!--                <video width="50%" height="100%" controls class="video" muted>-->
-<!--                    <source src="clip.mp4" type="video/mp4">-->
-<!--                    Your browser does not support the video tag.-->
-<!--                </video>-->
-<!--                <div class="textVideo">Это видео у Сереги</div>-->
-<!--            </section>-->
+            <!--            <section id="flexItem1">-->
+            <!--                <video width="50%" height="100%" controls class="video" muted>-->
+            <!--                    <source src="clip.mp4" type="video/mp4">-->
+            <!--                    Your browser does not support the video tag.-->
+            <!--                </video>-->
+            <!--                <div class="textVideo">Это видео у Сереги</div>-->
+            <!--            </section>-->
 
             <section id="flexItem2">
                 <img src="IisI.jpg">
@@ -188,14 +237,14 @@
     </div>
 
 
-<!--    <div class="gallery">-->
-<!--        <div class="image"><img src="Youtube%20.png" alt="Image 1"></div>-->
-<!--        <div class="image"><img src="tg.png" alt="Image 2"></div>-->
-<!--        <div class="image"><img src="vk.png" alt="Image 3"></div>-->
-<!--        <div class="image"><img src="logo.jpg" alt="Image 4"></div>-->
-<!--        <div class="image"><img src="slark.jpg" alt="Image 5"></div>-->
-<!--        <div class="image"><img src="smile.png" alt="Image 6"></div>-->
-<!--    </div>-->
+    <!--    <div class="gallery">-->
+    <!--        <div class="image"><img src="Youtube%20.png" alt="Image 1"></div>-->
+    <!--        <div class="image"><img src="tg.png" alt="Image 2"></div>-->
+    <!--        <div class="image"><img src="vk.png" alt="Image 3"></div>-->
+    <!--        <div class="image"><img src="logo.jpg" alt="Image 4"></div>-->
+    <!--        <div class="image"><img src="slark.jpg" alt="Image 5"></div>-->
+    <!--        <div class="image"><img src="smile.png" alt="Image 6"></div>-->
+    <!--    </div>-->
 
 
     <!--    <button onclick="window.open('second.html', '_blank')">Зарегистрироваться</button>-->
@@ -212,7 +261,8 @@
         </div>
         <div class="footer-about">
             <h3>О нас</h3>
-            <p>Мы - ваш надежный партнер в мире веб-разработки. Свяжитесь с нами, и мы поможем воплотить ваши идеи в реальность.</p>
+            <p>Мы - ваш надежный партнер в мире веб-разработки. Свяжитесь с нами, и мы поможем воплотить ваши идеи в
+                реальность.</p>
         </div>
         <div class="footer-links">
             <h3>Ссылки</h3>

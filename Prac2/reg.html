@@ -10,25 +10,92 @@
     <h2>Регистрация</h2>
     <form class="registration-form">
         <div class="container-grid">
-        <div class="input-container">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" id="username" name="username">
-        </div>
-        <div class="input-container">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div class="input-container">
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password">
-        </div>
-        <div class="input-container">
-            <label for="confirm-password">Подтвердите пароль:</label>
-            <input type="password" id="confirm-password" name="confirm-password">
-        </div>
+            <div class="input-container">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="input-container">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="input-container">
+                <label for="confirm-password">Подтвердите пароль:</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+            </div>
         </div>
         <button class="submit-button" type="submit">Зарегистрироваться</button>
+
     </form>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+
+<div class="container">
+
+
+    <label for="registration">Желаете пройти регистрацию на сайте?</label>
+    <input type="text" id="registration" placeholder="Да или Нет">
+    <button onclick="checkRegistration()">Отправить</button>
+
+    <script>
+        function checkRegistration() {
+            var userInput = document.getElementById('registration').value;
+            if (userInput.toLowerCase() === 'да') {
+                alert('Круто!');
+            } else {
+                alert('Попробуйте ещё раз.');
+            }
+        }
+    </script>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+
+<div class="container">
+
+    <div class="registration-form">
+        <!--<div class="form-group">
+            <label for="login">Логин:</label>
+            <input type="text" id="login">
+        </div>
+        <div class="form-group">
+            <label for="password2">Пароль:</label>
+            <input type="password" id="password2">
+        </div>-->
+        <button onclick="checkCredentials()">Войти</button>
+    </div>
+
+    <script>
+        function checkCredentials() {
+            var login = prompt("Введите логин:");
+
+            if (login === null || login === "") {
+                alert("Отменено");
+            } else if (login === "Админ") {
+                var password = prompt("Введите пароль:");
+
+                if (password === null) {
+                    alert("Отменено");
+                } else if (password === "Я главный") {
+                    alert("Здравствуйте!");
+                } else {
+                    alert("Неверный пароль");
+                }
+            } else {
+                alert("Я вас не знаю");
+            }
+        }
+    </script>
 </div>
 </body>
 </html>

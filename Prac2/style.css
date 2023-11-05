@@ -1028,31 +1028,34 @@ input::placeholder {
     font-size: 140px;
 }
 
+.butLike {
+    display: grid;
+    justify-items: center;
+    padding-bottom: 30px;
+}
 
-/*.gallery {*/
-/*    display: grid;*/
-/*    !*grid-template-columns:  repeat(4, 1fr);*!*/
-/*    grid-template-columns: [start] 250px [line2] 400px [line3] 600px;*/
-/*    grid-template-rows: [row1-start] 150px [row1-end] 300px [last];*/
-/*    gap: 10px;*/
-/*    padding: 20px;*/
-/*}*/
+.like-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 
-/*.image {*/
-/*    position: relative;*/
-/*    overflow: hidden;*/
-/*    border: 1px solid #ccc;*/
-/*    transition: transform 0.3s;*/
-/*}*/
+}
 
-/*.image img {*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*    display: block;*/
-/*}*/
+.like-button.active {
+    background-color: #e74c3c;
+}
 
-/*.image:hover {*/
-/*    transform: scale(1.05);*/
-/*}*/
+#drawingArea {
+    width: 50vh;
+    height: 50vh;
+    border: 1px solid black;
+    position: relative;
+}
 
-
+.drawingElement {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
