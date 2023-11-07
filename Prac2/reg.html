@@ -27,7 +27,7 @@
                 <input type="password" id="confirm-password" name="confirm-password">
             </div>
         </div>
-        <button class="submit-button" type="submit">Зарегистрироваться</button>
+        <button id="buttonReg" class="submit-button" type="submit">Зарегистрироваться</button>
 
     </form>
 </div>
@@ -95,6 +95,98 @@
                 alert("Я вас не знаю");
             }
         }
+    </script>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<div class="container">
+    <script>
+        function generateCaptcha() {
+            var captcha = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            for (var i = 0; i < 5; i++) {
+                var randomIndex = Math.floor(Math.random() * characters.length); // floor - округление в меньшую сторону
+                captcha += characters[randomIndex];
+            }
+            return captcha;
+        }
+
+        function generateMathCaptcha() {
+            var num1 = Math.floor(Math.random() * 10);
+            var num2 = Math.floor(Math.random() * 10);
+            return {
+                num1: num1,
+                num2: num2,
+                sum: num1 + num2
+            };
+        }
+
+        function checkCaptcha() {
+            var userInput = document.getElementById('captchaInput').value;
+            if (userInput === '') {
+                alert('Введите капчу');
+                return;
+            }
+
+            var captchaContainer = document.getElementById('captchaContainer');
+            var captchaType = captchaContainer.getAttribute('data-type');
+
+            if (captchaType === 'text') {
+                var captchaValue = captchaContainer.getAttribute('data-value');
+                if (userInput === captchaValue) {
+                    alert('Капча принята');
+                    buttonReg.classList.toggle("active");
+                } else {
+                    alert('Неправильная капча. Попробуйте еще раз.');
+                    refreshCaptcha();
+                }
+            } else if (captchaType === 'math') {
+                var captchaSum = parseInt(captchaContainer.getAttribute('data-sum'));
+                if (parseInt(userInput) === captchaSum) {
+                    alert('Капча принята');
+                    buttonReg.classList.toggle("active");
+                } else {
+                    alert('Неправильная сумма. Попробуйте еще раз.');
+                    refreshCaptcha();
+                }
+            }
+        }
+
+        function refreshCaptcha() {
+            var captchaContainer = document.getElementById('captchaContainer');
+            var captchaType = captchaContainer.getAttribute('data-type');
+            // alert(captchaType);
+
+            if (captchaType === 'math') {
+                var newCaptcha = generateCaptcha();
+                captchaContainer.setAttribute('data-value', newCaptcha);
+                captchaContainer.textContent = newCaptcha;
+
+                captchaContainer.setAttribute('data-type', 'text');
+            } else if (captchaType === 'text') {
+                var newMathCaptcha = generateMathCaptcha();
+                captchaContainer.setAttribute('data-sum', newMathCaptcha.sum);
+                captchaContainer.textContent = newMathCaptcha.num1 + ' + ' + newMathCaptcha.num2 + ' = ';
+
+                captchaContainer.setAttribute('data-type', 'math');
+            }
+        }
+    </script>
+
+    <div id="captchaContainer"></div>
+    <input type="text" id="captchaInput">
+    <button onclick="checkCaptcha()">Проверить</button>
+    <button onclick="refreshCaptcha()">Обновить капчу</button>
+
+    <script>
+        var captchaContainer = document.getElementById('captchaContainer');
+        captchaContainer.setAttribute('data-type', 'text'); // name attribute, value
+        var newCaptcha = generateCaptcha();
+        captchaContainer.setAttribute('data-value', newCaptcha);
+        captchaContainer.textContent = newCaptcha;
     </script>
 </div>
 </body>
