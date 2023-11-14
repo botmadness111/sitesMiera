@@ -13,12 +13,32 @@ header {
     position: absolute;
 }
 
+.notificationBox {
+    display: flex;
+    justify-content: end;
+}
 
-.logo {
-    position: relative; /* Нужно, чтобы дочерние элементы могли быть абсолютно позиционироваными относительно .logo */
-    background-color: #8401E3;
-    width: 100%;
+.notification {
+    position: absolute;
+    z-index: 3;
+}
 
+.notificationImg {
+    width: 50px;
+    height: 50px;
+}
+
+.notifications {
+    position: absolute;
+    right: 5%;
+    height: 50px;
+    z-index: 4;
+}
+
+.stopButton {
+    position: absolute;
+    top: 10%;
+    right: 4%;
 }
 
 .logo img {
@@ -34,7 +54,7 @@ header {
 
 .logo h1 {
     position: absolute; /* Абсолютное позиционирование относительно .logo */
-    right: 5%; /* Располагаем заголовок справа на 5% относительно .logo */
+    left: 5%; /* Располагаем заголовок справа на 5% относительно .logo */
     color: white; /* Цвет текста заголовка */
 }
 
@@ -1059,3 +1079,38 @@ input::placeholder {
     height: 20px;
     position: absolute;
 }
+
+#h2MyPlayList {
+    margin-left: 27%;
+    position: relative;
+    font-size: 20px;
+}
+
+.MyPlayList {
+    position: relative;
+    display: grid;
+    flex-wrap: initial;
+    justify-content: center;
+    margin-top: 5%;
+
+}
+
+.Buttons {
+    position: relative;
+    display: block;
+
+}
+
+.AreaToMusics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    grid-auto-flow: row; /* бразуер сам заполняет пустые ячейке в разметке*/
+
+    justify-items: stretch; /*растягивает элемент на всю ширину грид-ячейки*/
+
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
