@@ -198,7 +198,6 @@
                 return String(str);
             }
         }
-
     </script>
 
     <div class="playListDay">
@@ -217,16 +216,20 @@
             </div>
             <div class="cardPlayList" id="card2">
                 <div class="content">
-                    <h2><script>
-                        document.write(truncate("Плейлист 2", 8))
-                    </script></h2>
+                    <h2>
+                        <script>
+                            document.write(truncate("Плейлист 2", 8))
+                        </script>
+                    </h2>
                 </div>
             </div>
             <div class="cardPlayList" id="card3">
                 <div class="content">
-                    <h2><script>
-                        document.write(truncate("Плейлист 3", 10))
-                    </script></h2>
+                    <h2>
+                        <script>
+                            document.write(truncate("Плейлист 3", 10))
+                        </script>
+                    </h2>
                 </div>
             </div>
             <div class="cardPlayList" id="card4">
@@ -256,19 +259,64 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
+    <div class="MyPlayList">
+        <div id="h2MyPlayList">
+            <h2>Моя музыка</h2>
+            <h2>
+                <div id="dynamicTextContainer">
+                    Добавлено:
+                    <script>
+                        document.write(getSize());
+                    </script>
+                </div>
 
 
-    <!--    <div class="gallery">-->
-    <!--        <div class="image"><img src="Youtube%20.png" alt="Image 1"></div>-->
-    <!--        <div class="image"><img src="tg.png" alt="Image 2"></div>-->
-    <!--        <div class="image"><img src="vk.png" alt="Image 3"></div>-->
-    <!--        <div class="image"><img src="logo.jpg" alt="Image 4"></div>-->
-    <!--        <div class="image"><img src="slark.jpg" alt="Image 5"></div>-->
-    <!--        <div class="image"><img src="smile.png" alt="Image 6"></div>-->
-    <!--    </div>-->
+            </h2>
+        </div>
+        <div class="Buttons">
+            <button onclick="addItem()">Добавить музыку</button>
+            <button onclick="removeItem()">Удалить музыку</button>
+            <button onclick="clearItems()">Очистить плейлист</button>
+            <script src="script.js"></script>
+        </div>
 
 
-    <!--    <button onclick="window.open('second.html', '_blank')">Зарегистрироваться</button>-->
+        <div class="AreaToMusics" id="AreaToMusics">
+
+        </div>
+
+        <div>
+            <button onclick="sortItems1()">Отсортировать музыку по возрастанию</button>
+            <button onclick="sortItems2()">Отсортировать музыку по убыванию</button>
+        </div>
+    </div>
+
+    <script>
+        function filterArray(arr, a, b) {
+            console.log(arr[0]);
+            let result = arr.filter(function (element) {
+                return Number(element) >= Number(a) && Number(element) <= Number(b);
+            })
+            let stroka = result.join(" ");
+            return stroka;
+        }
+
+        function postSelect() {
+            let str = String(document.getElementById('massive').value);
+            let array = str.split(" ");
+            let ans = filterArray(array, 2, 5);
+            alert(ans);
+        }
+    </script>
+
+    <div>
+        <label for="massive">Введите элементы массива</label>
+        <input type="text" id="massive">
+
+        <button onclick="postSelect()">Отправить</button>
+    </div>
+
 </main>
 
 <footer>

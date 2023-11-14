@@ -1059,3 +1059,38 @@ input::placeholder {
     height: 20px;
     position: absolute;
 }
+
+#h2MyPlayList {
+    margin-left: 27%;
+    position: relative;
+    font-size: 20px;
+}
+
+.MyPlayList {
+    position: relative;
+    display: grid;
+    flex-wrap: initial;
+    justify-content: center;
+    margin-top: 5%;
+
+}
+
+.Buttons {
+    position: relative;
+    display: block;
+
+}
+
+.AreaToMusics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    grid-auto-flow: row; /* бразуер сам заполняет пустые ячейке в разметке*/
+
+    justify-items: stretch; /*растягивает элемент на всю ширину грид-ячейки*/
+
+    column-gap: 30px;
+    row-gap: 30px;
+}
+

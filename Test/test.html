@@ -1,47 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Count</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
 </head>
 <body>
-<main>
+<div id="cart">
+    <!-- Здесь будут отображаться элементы корзины -->
+</div>
+<button onclick="addItem()">Добавить товар</button>
+<button onclick="clearCart()">Очистить корзину</button>
 
-    <script>
-        function Accumulator(startingValue) {
-            this.value = startingValue;
-
-            this.read = function () {
-                var userInput = prompt('Введите число:', '');
-
-                var number = parseFloat(userInput);
-                if (isNaN(number)) {
-                    alert('Введите корректное число.');
-                } else {
-                    this.value += number;
-                }
-
-                alert(accumulator.value);
-            };
-
-
-        }
-
-        // Пример использования
-        var accumulator = new Accumulator(10);
-
-        accumulator.read();
-
-        //console.log(accumulator.value); // Выводит текущее значение, например, 18
-    </script>
-
-    <div>
-        <button id="buttonAdd" onclick=accumulator.read()>Прибавить число</button>
-
-    </div>
-
-</main>
-
+<script src="test.js"></script>
 </body>
-
 </html>
