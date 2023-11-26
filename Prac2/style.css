@@ -5,6 +5,19 @@ body {
 
 header {
     position: static;
+}
+
+@media screen and (min-width: 1081px) {
+    header {
+        height: 600px;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    header {
+        height: 1000px;
+    }
 
 }
 
@@ -137,148 +150,80 @@ header {
 }
 
 
-.burgerIcon {
-    display: flex;
-    width: 35px;
-    height: 30px;
-    background-color: white;
-    left: 95%;
-    top: 320px;
-
-    position: relative;
-    cursor: pointer;
-
-    z-index: 3;
-}
-
-.burgerIcon::before, .burgerIcon::after {
-    content: "";
-    position: absolute;
-    background: white;
-    width: 100%;
-    height: 8px;
-    transition: transform 0.2s ease-in-out;
-
-}
-
-.burgerIcon::before {
-    top: 0;
-    margin-top: 13%;
-    background-color: #8401E3;
-}
-
-.burgerIcon::after {
-    bottom: 0;
-    margin-bottom: 13%;
-    background-color: #8401E3;
-}
-
-.menu {
-    position: relative;
-    visibility: hidden;
-    display: none;
-    width: 100%;
-}
-
-#burgerCheckbox:checked + .burgerIcon::before {
-    transform: rotate(45deg) translate(6px, 6px);
-    background-color: white;
-}
-
-#burgerCheckbox:checked + .burgerIcon::after {
-    transform: rotate(-45deg) translate(6px, -6px);
-    background-color: white;
-}
-
-#burgerCheckbox:checked + .burgerIcon {
-    background-color: inherit;
-}
-
-#burgerCheckbox {
-    display: none;
-}
-
-@media screen and (min-width: 1440px) {
-
-    #burgerCheckbox:checked ~ .menu {
-        visibility: visible;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-around;
-        width: 100%;
-    }
-
-    nav {
-        top: 320px;
-        position: relative;
-        background-color: blueviolet;
-        width: 100%;
-        height: 200px;
-    }
-
-    .pLineSecond {
-        position: relative;
-        left: 180px;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-
-    #burgerCheckbox:checked ~ .menu {
-        visibility: visible;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-around;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap; /*перенос на след строку*/
-        flex-direction: column; /*основная ось-слева направо, поперечная - сверху вниз*/
-        justify-content: space-between; /*выравниает освновную ось*/
-        align-items: stretch; /*выравниает по поперечной оси внутри контейнера*/ /*по умолчанию вдоль всей высоты*/
-        align-content: space-around; /*выравниает по поперченой оси между рядами flex*/
-        row-gap: 30px; /*отступы между строками и стоблцами*/
-
-        top: 320px;
-        position: relative; /* относительно элемента - nav*/
-        background-color: blueviolet;
-        width: 100%;
-        height: 700px;
-    }
-
-}
-
-
-nav p {
+div p {
     position: relative;
     color: white;
     font-size: 30px;
     display: inline-block;
-    margin-right: 5%;
-    padding-left: 13%;
 
 
     transform: skew(15deg); /* наклонить прямоугольник*/
 }
 
-nav p a {
+div p a {
     color: white;
     text-decoration: none;
 }
 
 
-nav p:hover {
+div p:hover {
     transition: background-color 1s ease; /* Плавный переход для цвета заднего фона */
     opacity: 0.7;
+    cursor: pointer;
 }
 
-main {
-    position: static;
-    margin-top: 35%;
-    font-size: 15px;
-    width: 100%;
+.boxMenu {
+    position: relative;
+    top: 350px;
+    background-color: mediumpurple;
 }
+
+.firstLine {
+    display: grid;
+
+    grid-template-columns: auto auto auto;
+
+    justify-content: space-around;
+
+    row-gap: 30px;
+    column-gap: 30px;
+
+}
+
+.secondLine {
+    display: grid;
+
+    grid-template-columns: auto auto;
+
+    justify-content: space-around;
+
+    row-gap: 50px;
+    column-gap: -10px;
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 1080px) {
+    .firstLine {
+        grid-template-columns: auto;
+    }
+
+    .secondLine {
+        grid-template-columns: auto;
+    }
+
+}
+
+@media screen and (min-width: 1081px) {
+    .firstLine {
+        grid-template-columns: auto auto auto;
+    }
+
+    .secondLine {
+        grid-template-columns: auto auto;
+    }
+
+}
+
 
 .topWeek {
     display: block;
@@ -288,9 +233,41 @@ main {
 
 #h2TopWeek {
 
-    margin-left: 37%;
+    text-align: center;
     position: relative;
     font-size: 30px;
+}
+
+.gridSectionFirst {
+    display: grid;
+    justify-content: center;
+}
+
+.gridSectionSecond {
+    display: grid;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1080px) {
+    .gridSectionFirst {
+        grid-template-columns: auto;
+    }
+
+    .gridSectionSecond {
+        grid-template-columns: auto;
+    }
+
+}
+
+@media screen and (min-width: 1081px) {
+    .gridSectionFirst {
+        grid-template-columns: auto auto;
+        grid-column-gap: 80px;
+    }
+
+    .gridSectionSecond {
+        grid-template-columns: auto;
+    }
 }
 
 section {
@@ -300,7 +277,6 @@ section {
     width: 500px;
 
 
-    margin-left: 28%;
     margin-bottom: 20px;
 
     transform: skew(15deg); /* наклонить прямоугольник*/
@@ -333,6 +309,7 @@ section {
     align-items: center;
     justify-content: space-around;
     opacity: 0;
+    cursor: default;
 }
 
 .infoSection:hover {
@@ -381,7 +358,7 @@ section {
 
     from {
         top: 0;
-        left: 100%;
+        left: 93%;
     }
 
     50% {
@@ -403,7 +380,7 @@ section {
     background-color: red;
     z-index: 3;
     top: 0;
-    left: 100%;
+    left: 93%;
 }
 
 .infoSection:hover::before {
@@ -416,7 +393,7 @@ section {
 @keyframes right-left-square {
     from {
         bottom: 0;
-        right: 100%;
+        right: 93%;
     }
 
     50% {
@@ -438,7 +415,7 @@ section {
     background-color: red;
     z-index: 3;
     bottom: 0;
-    right: 100%;
+    right: 93%;
 }
 
 .infoSection:hover::after {
@@ -523,79 +500,47 @@ section:hover address {
     visibility: visible;
 }
 
-
-.video {
-    margin-left: 400px;
-    background-color: #8401E3;
+#btnDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+#btnRefresh{
+    display: none;
 }
 
-.textVideo {
-    font-size: 30px;
-    position: relative;
-    text-align: center;
-    color: red;
-    top: -100px;
-    opacity: 0;
+.btnMore {
+    background-color: mediumpurple;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.textVideo::before {
-    content: "";
-    width: 280px;
-    height: 50px;
-    position: absolute;
-    background: #6ea8da;
-    opacity: 0.3;
+.btnMore:hover {
+    background-color: purple;
 }
 
-#flexItem1:hover .textVideo {
-    transition: opacity 300ms, ease-in-out, 1s;
-    opacity: 1;
+.btnMore:active {
+    background-color: purple;
 }
 
-#flexItem1:hover .textVideo::before {
-    transition: background-color 300ms, ease-in-out, 5s;
-    background-color: red;
+.moreSection{
+    display: grid;
+    grid-column: auto;
+    grid-row: auto;
+    justify-content: space-around;
 }
 
-.maybeLike {
-    position: relative;
+.moreSection div address::before {
+    content: "👤";
 }
 
-aside {
-    position: absolute; /* Абсолютное позиционирование относительно div_class=topWeek*/
-    left: 80%; /* Располагаем заголовок по горизонтали на 50% относительно .logo */
-    top: 40%;
-    color: white; /* Цвет текста заголовка */
-    /*border: 3px solid black;*/
-}
-
-
-.h3Aside {
-    position: relative;
-    font-size: 30px;
-    color: black;
-    right: 30px;
-}
-
-aside pre {
-    margin: auto;
-    text-align: left;
-    margin-bottom: -17px;
-    margin-left: 50px;
-}
-
-aside img {
-    width: 40px;
-    height: 40px;
-    transform: translate(0%, -57%);
-    border-radius: 10px;
-}
-
-aside img:active {
-    transition: background-color 1s ease; /* Плавный переход для цвета заднего фона */
-    background-color: #8401E3;
-    clip-path: ellipse(100% 100%); /* Форма заднего фона в виде круга */
-    opacity: 0.7;
+div cite::before {
+    content: "🎵";
 }
 
 
@@ -711,7 +656,7 @@ aside img:active {
 }
 
 #h2BotWeek {
-    margin-left: 37%;
+    text-align: center;
     position: relative;
     font-size: 30px;
 }

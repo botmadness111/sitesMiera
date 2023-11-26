@@ -42,8 +42,6 @@ function display(){
     let dynamicText = document.getElementById("dynamicTextContainer");
     dynamicText.textContent = "Добавлено: " + getSize();
 
-
-
 }
 
 

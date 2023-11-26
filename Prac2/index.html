@@ -29,35 +29,28 @@
         <img src="logo.jpg" alt="Логотип сайта">
     </div>
 
-    <input type="checkbox" id="checkboxLogo">
-    <label for="checkboxLogo"></label>
+    <div class="boxMenu">
+        <div class="firstLine">
+            <div><p>Лучшее дня</p></div>
+            <div><p>Худшее дня</p></div>
+            <div><p>Мой плейлист</p></div>
+        </div>
+        <div class="secondLine">
+            <div><p>Тебе понравится4</p></div>
+            <div><p>Тебе понравится5</p></div>
+        </div>
 
-    <div class="logo h1">
-        <h1>Wex</h1>
+
     </div>
 
-    <input type="checkbox" id="burgerCheckbox">
-    <label for="burgerCheckbox" class="burgerIcon"></label>
-
-    <nav class="menu">
-        <!-- Навигационное меню -->
-        <p><a href="#topWeek">Top недели</a></p>
-        <p>Bot недели</p>
-        <p>Тебе понравится</p>
-        <p class="pLineSecond">Мои Плейлисты</p>
-        <p class="pLineSecond">Топ Плейлисты</p>
-
-    </nav>
 
 </header>
 
 <main>
-
-
     <div class="topWeek">
-        <h2 id="h2TopWeek">🔥Top недели🔥</h2>
+        <h2 id="h2TopWeek">🔥Лучшее дня🔥</h2>
 
-        <div class="gridSection">
+        <div class="gridSectionFirst">
             <section id="sectionFirst">
                 <cite>Я не боюсь ошибаться</cite>
                 <address>Серега Пират</address>
@@ -71,53 +64,6 @@
                 </div>
             </section>
 
-
-            <div class="butLike">
-                <button id="likeButton" class="like-button">Нравится</button>
-                <script>
-                    likeButton = document.getElementById("likeButton");
-
-                    likeButton.addEventListener("click", () => {
-                        likeButton.classList.toggle("active");
-                    });
-                </script>
-
-            </div>
-
-
-            <div id="drawingArea">
-
-
-                <script>
-                    const drawingArea = document.getElementById("drawingArea");
-                    let isDrawing = false;
-
-                    drawingArea.addEventListener("mousedown", (e) => {
-                        isDrawing = true;
-                    });
-
-                    drawingArea.addEventListener("mousemove", (e) => {
-                        if (isDrawing) {
-                            createDrawingElement(e.clientX, e.clientY);
-                        }
-                    });
-
-                    drawingArea.addEventListener("mouseup", () => isDrawing = false);
-
-                    function createDrawingElement(x, y) {
-                        const drawingElement = document.createElement("img");
-                        drawingElement.className = "drawingElement";
-                        drawingElement.style.left = x - 20 + "px";
-                        drawingElement.style.top = y - 300 + "px";
-                        drawingElement.src = "tg.png"
-                        drawingArea.appendChild(drawingElement);
-                    }
-
-                </script>
-
-            </div>
-
-
             <section id="sectionSecond">
                 <cite>Лимон</cite>
                 <address>Серега Пират</address>
@@ -129,6 +75,8 @@
                     <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="vk.png" alt="лого vk"></a>
                 </div>
             </section>
+        </div>
+        <div class="gridSectionSecond">
 
             <section id="sectionThird">
                 <cite>Тп на аме</cite>
@@ -143,10 +91,21 @@
             </section>
         </div>
 
+        <div id="moreSection" class="moreSection">
+
+        </div>
+        <div id="btnDiv">
+            <button class="btnMore" onclick="displayMusic()">Еще⇩</button>
+            <button id="btnRefresh" class="btnMore" onclick="refreshMusic()">Скрыть❌</button>
+        </div>
+
+        <script src="moreScript.js"></script>
+
+
     </div>
 
     <div class="botWeek">
-        <h2 id="h2BotWeek">🔥Худшее недели🔥</h2>
+        <h2 id="h2BotWeek">🔥Худшее дня🔥</h2>
         <div class="flexClass">
 
             <section id="flexItem2">
