@@ -1,0 +1,33 @@
+.registrationArea {
+    background-color: #090909;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.btnRegistration {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+
+.btnRegistration:hover {
+    transform: scale(1.05);
+}
+
+.btnEnter {
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 20px;
+    width: 120px;
+    margin-right: 30px;
+}
+
+.btnEnter:hover {
+    transform: scale(1.05);
+}

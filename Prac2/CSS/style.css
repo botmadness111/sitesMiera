@@ -3,12 +3,17 @@ root{
 }
 
 body {
-    background-color: #8401E3;
+    background-color: #000000;
+}
+
+main{
+    /*background-color: #8401E3;*/
 }
 
 
 header {
     position: static;
+    /*background-color: #8401E3;*/
 }
 
 @media screen and (min-width: 1081px) {
