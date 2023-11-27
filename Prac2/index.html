@@ -51,7 +51,7 @@
         <h2 id="h2TopWeek">🔥Лучшее дня🔥</h2>
 
         <div class="gridSectionFirst">
-            <section id="sectionFirst">
+            <section class="sectionFirst">
                 <cite>Я не боюсь ошибаться</cite>
                 <address>Серега Пират</address>
                 <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="top1.png" alt="обложка трека"></a>
@@ -64,7 +64,7 @@
                 </div>
             </section>
 
-            <section id="sectionSecond">
+            <section class="sectionSecond">
                 <cite>Лимон</cite>
                 <address>Серега Пират</address>
                 <a href="https://www.youtube.com/watch?v=Vr-DOV-TP5s"><img src="top2.png" alt="обложка трека"></a>
@@ -78,7 +78,7 @@
         </div>
         <div class="gridSectionSecond">
 
-            <section id="sectionThird">
+            <section class="sectionThird">
                 <cite>Тп на аме</cite>
                 <address>Серега Пират</address>
                 <a href="https://www.youtube.com/watch?v=ocRN6Hz3LrI"><img src="top3.jpg" alt="обложка трека"></a>
@@ -91,43 +91,67 @@
             </section>
         </div>
 
-        <div id="moreSection" class="moreSection">
+        <div id="moreSectionTop" class="moreSection">
 
         </div>
-        <div id="btnDiv">
-            <button class="btnMore" onclick="displayMusic()">Еще⇩</button>
-            <button id="btnRefresh" class="btnMore" onclick="refreshMusic()">Скрыть❌</button>
+        <div id="btnDivTop">
+            <button class="btnMore" onclick="displayMusicTop()">Еще⇩</button>
+            <button id="btnRefreshTop" class="btnMore" onclick="refreshMusicTop()">Скрыть❌</button>
         </div>
 
         <script src="moreScript.js"></script>
-
-
     </div>
 
     <div class="botWeek">
-        <h2 id="h2BotWeek">🔥Худшее дня🔥</h2>
-        <div class="flexClass">
-
-            <section id="flexItem2">
-                <img src="IisI.jpg">
+        <div class="gridSectionFirst">
+            <section class="sectionFirst">
+                <cite>Я не боюсь ошибаться</cite>
+                <address>Серега Пират</address>
+                <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="top1.png" alt="обложка трека"></a>
+                <div class="infoSection">
+                    Тут может быть информация о треке
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="Youtube%20.png"
+                                                                               alt="лого ютуба"></a>
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="tg.png" alt="лого телеграма"></a>
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="vk.png" alt="лого vk"></a>
+                </div>
             </section>
 
-            <section id="flexItem3">
-                <img src="vibeMan.jpg">
+            <section class="sectionSecond">
+                <cite>Лимон</cite>
+                <address>Серега Пират</address>
+                <a href="https://www.youtube.com/watch?v=Vr-DOV-TP5s"><img src="top2.png" alt="обложка трека"></a>
+                <div class="infoSection">Тут может быть информация о треке
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="Youtube%20.png"
+                                                                               alt="лого ютуба"></a>
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="tg.png" alt="лого телеграма"></a>
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="vk.png" alt="лого vk"></a>
+                </div>
             </section>
+        </div>
+        <div class="gridSectionSecond">
 
-            <section id="flexItem4">
-                <img src="slark.jpg">
+            <section class="sectionThird">
+                <cite>Тп на аме</cite>
+                <address>Серега Пират</address>
+                <a href="https://www.youtube.com/watch?v=ocRN6Hz3LrI"><img src="top3.jpg" alt="обложка трека"></a>
+                <div class="infoSection">Тут может быть информация о треке
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="Youtube%20.png"
+                                                                               alt="лого ютуба"></a>
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="tg.png" alt="лого телеграма"></a>
+                    <a href="https://www.youtube.com/watch?v=nvbiD6xiG0s"><img src="vk.png" alt="лого vk"></a>
+                </div>
             </section>
-
-            <section id="flexItem5">
-                <img src="IisI.jpg">
-            </section>
-
+        </div>
+        <div id="moreSectionBot" class="moreSection">
 
         </div>
-
+        <div id="btnDivBot">
+            <button class="btnMore" onclick="displayMusicBot()">Еще⇩</button>
+            <button id="btnRefreshBot" class="btnMore" onclick="refreshMusicBot()">Скрыть❌</button>
+        </div>
     </div>
+    <script src="moreScript.js"></script>
 
     <script>
         function truncate(str, maxlength) {

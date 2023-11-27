@@ -1,0 +1,24 @@
+.playList {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+    gap: 100px;
+}
+
+.musicCard {
+    background-color: #69b7eb;
+    height: 300px;
+    width: 217px;
+
+    border: 5px solid;
+    border-image-source: linear-gradient(to right, #ff0000, #00ff00);
+    border-image-slice: 1;
+    border-image-repeat: stretch;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.musicCard img{
+    height: 250px;
+}
