@@ -279,21 +279,21 @@ div p:hover {
     }
 }
 
-section {
-    position: relative;
-    background-color: ghostwhite;
-    display: block; /*делаем его блочным*/
-    width: 500px;
+/*section {*/
+/*    position: relative;*/
+/*    background-color: ghostwhite;*/
+/*    display: block; !*делаем его блочным*!*/
+/*    width: 500px;*/
 
 
-    margin-bottom: 20px;
+/*    margin-bottom: 20px;*/
 
-    transform: skew(15deg); /* наклонить прямоугольник*/
+/*    transform: skew(15deg); !* наклонить прямоугольник*!*/
 
-    border: 8px solid;
+/*    border: 8px solid;*/
 
 
-}
+/*}*/
 
 @keyframes no-info {
     from {
@@ -322,9 +322,9 @@ section {
 }
 
 .infoSection:hover {
-    animation-name: no-info;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
+    /*animation-name: no-info;*/
+    /*animation-duration: 5s;*/
+    /*animation-fill-mode: forwards;*/
 }
 
 @keyframes logoFill {
@@ -616,14 +616,14 @@ div cite::before {
     width: 100%;
 }
 
-@keyframes cardAnimation {
-    from {
-        filter: blur(5px);
-    }
-    to {
-        filter: blur(1px);
-    }
-}
+/*@keyframes cardAnimation {*/
+/*    from {*/
+/*        filter: blur(5px);*/
+/*    }*/
+/*    to {*/
+/*        filter: blur(1px);*/
+/*    }*/
+/*}*/
 
 #flexItem2 {
     flex-basis: 20%; /*занимает место еще до того как свободное место будет распределено*/
@@ -641,8 +641,8 @@ div cite::before {
 }
 
 .flexClass section:hover ~ section {
-    animation-name: cardAnimation;
-    animation-duration: 5s;
+    /*animation-name: cardAnimation;*/
+    /*animation-duration: 5s;*/
 }
 
 

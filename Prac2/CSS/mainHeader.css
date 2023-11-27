@@ -1,3 +1,19 @@
+header{
+    height: 260px;
+}
+
+.headerArea {
+    display: grid;
+    grid-template-columns: 20% auto;
+    gap: 10px;
+}
+
+.AreaToRegistrationArea {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
 .registrationArea {
     background-color: #090909;
     display: grid;
@@ -5,8 +21,10 @@
     justify-content: end;
     align-items: center;
     gap: 30px;
-    height: 100px;
-    border-radius: 10px;
+    height: 130px;
+    border-radius: 15px;
+    width: 100%;
+
 }
 
 .btnRegistration {
@@ -30,4 +48,46 @@
 
 .btnEnter:hover {
     transform: scale(1.05);
+}
+
+
+.navigation {
+    background-color: #090909;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    justify-content: start;
+    align-content: space-around;
+    height: 270px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.btnNameSite {
+    margin-left: 7%;
+    font-weight: bold;
+    scale: 1.2;
+}
+
+.navigation div {
+    margin-left: 50%;
+    width: 100%;
+    color: white;
+}
+
+.navigation button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.navigation .btnHome:hover {
+    transform: scale(1.05);
+    font-weight: bold;
+}
+
+.navigation .btnSearch:hover {
+    transform: scale(1.05);
+    font-weight: bold;
 }

@@ -11,6 +11,7 @@ function displayMusicTop() {
     itemDiv.style.background = "white";
     itemDiv.style.margin = "2px";
     itemDiv.style.borderRadius = "5px";
+    itemDiv.style.margin = "5px";
 
     let name = String(queueMusic.shift());
     let author = String(queueAuthor.shift());
@@ -43,6 +44,7 @@ function displayMusicBot() {
     itemDiv.style.background = "white";
     itemDiv.style.margin = "2px";
     itemDiv.style.borderRadius = "5px";
+
 
     let name = String(queueMusic.shift());
     let author = String(queueAuthor.shift());
