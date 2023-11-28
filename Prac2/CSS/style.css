@@ -556,6 +556,10 @@ section:hover address {
     justify-content: space-around;
 }
 
+.moreSection div{
+
+}
+
 .moreSection div address::before {
     content: "👤";
 }
