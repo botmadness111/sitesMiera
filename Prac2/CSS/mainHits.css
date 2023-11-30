@@ -104,6 +104,10 @@ section cite::before {
     justify-content: start;
     align-content: center;
     gap: 10px;
+
+    max-height: 300px;
+    width: 300px;
+    overflow-y: scroll;
 }
 
 .moreSectionImage {

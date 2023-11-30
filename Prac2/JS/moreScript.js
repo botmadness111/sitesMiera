@@ -11,7 +11,7 @@ var listTop = document.getElementById("moreSectionTop");
 
 function displayMusicTop() {
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 10; i++) {
 
         let area = document.getElementById("areaToImageAndTextTop");
         area.className = "areaToImageAndText";
@@ -80,7 +80,7 @@ var listBot = document.getElementById("moreSectionBot");
 
 function displayMusicBot() {
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 10; i++) {
 
         let area = document.getElementById("areaToImageAndTextBot");
         area.className = "areaToImageAndText";
