@@ -1,22 +1,15 @@
-function showNotification(options) {
-    // Создаем элемент div для уведомления
-    var notification = document.createElement('div');
-    notification.className = 'notification';
-    notification.innerHTML = options.content;
+document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('scroll', function () {
+        var stickyBlock = document.querySelector('.sticky-block');
+        var content = document.querySelector('.content');
 
-    // Добавляем уведомление на страницу
-    document.body.appendChild(notification);
+        var contentRect = content.getBoundingClientRect();
+        var stickyBlockRect = stickyBlock.getBoundingClientRect();
 
-    // Задержка перед удалением уведомления
-    setTimeout(function() {
-        // Удаляем уведомление после 1,5 секунд
-        document.body.removeChild(notification);
-    }, 1500);
-}
-
-// Пример использования функции
-var notificationOptions = {
-    content: 'Привет, это уведомление!'
-};
-
-showNotification(notificationOptions);
+        if (contentRect.bottom <= stickyBlockRect.height) {
+            stickyBlock.style.position = 'relative';
+        } else {
+            stickyBlock.style.position = 'absolute';
+        }
+    });
+});

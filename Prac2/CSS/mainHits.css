@@ -23,9 +23,20 @@
 
 @keyframes sectionAnimation {
 
-    100% {
-        background-position: 0 250px;
+    0% {
+        background-position: 0px 0px;
+
+        scale: 1.1;
+        border: 2px solid white;
     }
+
+    100% {
+        background-position: 0px 250px;
+
+        scale: 1.1;
+        border: 2px solid white;
+    }
+
 }
 
 .theBestArea section {
@@ -40,10 +51,16 @@
 }
 
 .theBestArea section:hover {
+    scale: 1.1;
+    border: 2px solid white;
+}
+
+.startAnimation{
     animation-name: sectionAnimation;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
 }
+
 
 section address::before {
     margin-left: 4%;
@@ -130,4 +147,5 @@ section cite::before {
     height: 50px;
     border-radius: 10px;
 }
+
 

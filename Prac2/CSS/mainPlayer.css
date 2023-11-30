@@ -1,0 +1,20 @@
+.playerContainer {
+    position: sticky;
+    bottom: 15px;
+
+    display: grid;
+    grid-template-columns: auto;
+
+    margin-left: 20%;
+    justify-content: center;
+    align-content: end;
+}
+
+.player {
+    width: 500px;
+    height: 40px;
+
+    border: 3px solid blue;
+    border-radius: 25px;
+
+}

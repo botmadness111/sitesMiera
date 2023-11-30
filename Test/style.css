@@ -1,24 +1,18 @@
-#notification {
-    display: none;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-#notification-text {
+body {
     margin: 0;
+    padding: 0;
 }
 
-.close {
-    cursor: pointer;
+.content {
+    /* Стили для вашего контента */
+}
+
+.sticky-block {
     position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 20px;
-    font-weight: bold;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Дополнительные стили для вашего блока */
 }

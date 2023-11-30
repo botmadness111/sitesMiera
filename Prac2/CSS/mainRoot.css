@@ -6,6 +6,7 @@ main {
 }
 
 .mainDiv {
+    position: sticky;
     display: grid;
     grid-template-columns: 20% auto;
     gap: 10px;
