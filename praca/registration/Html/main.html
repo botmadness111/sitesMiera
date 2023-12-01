@@ -4,28 +4,92 @@
     <meta charset="UTF-8">
     <title>Wex</title>
     <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/util/submitCircle.css">
 </head>
 <body>
-
 <main>
-    <div class="RegistrationContainer">
+    <div class="mainDiv">
 
-        <h1>🎶 Wex</h1>
+        <div class="RegistrationContainer">
 
-        <div class="registrationBox">
-            <form class="registrationForm">
+            <div class="startText">
+                <h1>🎶 Wex</h1>
+                <h1>Музыка для всех</h1>
+            </div>
 
-                <h3>Логин</h3>
-                <label id="login">
-                    <input class="registrationInput"/>
-                </label>
 
-                <h3>Пароль</h3>
-                <label id="password">
-                    <input class="registrationInput"/>
-                </label>
+            <div class="registrationBox">
+                <form class="registrationForm">
+                    <div class="registrationBoxLabels">
+                        <label id="login">
+                            <input class="registrationInput" type="text" placeholder="Логин">
+                        </label>
 
-            </form>
+                        <label id="password">
+                            <input class="registrationInput" type="password" placeholder="Пароль">
+                        </label>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="memberMe">
+                <div>
+                    <p>Запомнить меня</p>
+                </div>
+                <div class="circleBtn">
+                    <label>
+                        <input type="checkbox"/>
+                        <div class="circle">
+                            <div class="circle--inner circle--inner__1"></div>
+                            <div class="circle--inner circle--inner__2"></div>
+                            <div class="circle--inner circle--inner__3"></div>
+                            <div class="circle--inner circle--inner__4"></div>
+                            <div class="circle--inner circle--inner__5"></div>
+                            <div class="circle--outer"></div>
+                        </div>
+                        <svg>
+                            <defs>
+                                <filter id="gooey">
+                                    <feGaussianBlur
+                                            in="SourceGraphic"
+                                            result="blur"
+                                            stdDeviation="3"
+                                    />
+                                    <feColorMatrix
+                                            in="blur"
+                                            mode="matrix"
+                                            values="
+                                            1 0 0 0 0
+                                            0 1 0 0 0
+                                            0 0 1 0 0
+                                            0 0 0 18 -7
+                                          "
+                                            result="gooey"
+                                    />
+                                    <feBlend
+                                            in2="gooey"
+                                            in="SourceGraphic"
+                                            result="mix"
+                                    />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <div class="submitBtnArea">
+                    <input type="submit" value="Войти" class="submitBtn">
+                </div>
+
+                <hr style="width: 300px">
+
+                <div class="googleBtn">
+                    <button class="googleBtn">Войти через Google</button>
+                </div>
+            </div>
 
         </div>
     </div>

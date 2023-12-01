@@ -1,11 +1,4 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #af4671 0%, #a45cd1 100%);
-}
-
+/* Анмимация для кнопки*/
 * {
     box-sizing: border-box;
 }
@@ -15,42 +8,39 @@ input[type=checkbox] {
 }
 
 .circle {
-    position: absolute;
     width: 100px;
     height: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /*transform: translate(-50%, -50%);*/
     filter: url('#gooey');
 }
 
 @keyframes circle__in {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
     }
 
     16% {
-        transform: translate(-50%, -50%) scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
     }
 
     33% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
     }
 
     50% {
-        transform: translate(-50%, -50%) scale(1.05, 0.95);
+        transform: scale(1.05, 0.95);
     }
 
     66% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
     }
 
     83% {
-        transform: translate(-50%, -50%) scale(0.98, 1.02);
+        transform: scale(0.98, 1.02);
     }
 
     100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
     }
 }
 
@@ -70,18 +60,18 @@ input:checked + .circle {
 }
 
 .circle--outer {
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-    border: 6px solid white;
+    border: 2px solid white;
 }
 
 .circle--inner {
-    top: 15px;
-    left: 15px;
+    top: 5px;
+    left: 5px;
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     background: white;
 }
@@ -132,8 +122,24 @@ input:checked + .circle .circle--inner {
     animation-fill-mode: forwards;
 }
 
-.circle--inner__1 { transform-origin: -12% -8%; }
-.circle--inner__2 { transform-origin: -35% 50%; }
-.circle--inner__3 { transform-origin: 60% 130%; }
-.circle--inner__4 { transform-origin: 112% 90%; }
-.circle--inner__5 { transform-origin: 75% -30%; }
+.circle--inner__1 {
+    transform-origin: -12% -8%;
+}
+
+.circle--inner__2 {
+    transform-origin: -35% 50%;
+}
+
+.circle--inner__3 {
+    transform-origin: 60% 130%;
+}
+
+.circle--inner__4 {
+    transform-origin: 112% 90%;
+}
+
+.circle--inner__5 {
+    transform-origin: 75% -30%;
+}
+
+/*Анмимация для кнопки*/
