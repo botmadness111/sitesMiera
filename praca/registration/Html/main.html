@@ -22,11 +22,13 @@
                 <form class="registrationForm">
                     <div class="registrationBoxLabels">
                         <label id="login">
-                            <input class="registrationInput" type="text" placeholder="Логин">
+                            <input id="registrationInputLogin" class="registrationInput" type="text"
+                                   placeholder="Логин">
                         </label>
 
                         <label id="password">
-                            <input class="registrationInput" type="password" placeholder="Пароль">
+                            <input id="registrationInputPassword" class="registrationInput" type="password"
+                                   placeholder="Пароль">
                         </label>
                     </div>
 
@@ -81,15 +83,17 @@
 
             <div>
                 <div class="submitBtnArea">
-                    <input type="submit" value="Войти" class="submitBtn">
+                    <input type="submit" value="Войти" class="submitBtn" onclick="doRegistration()">
                 </div>
 
                 <hr style="width: 300px">
 
                 <div class="googleBtn">
-                    <button class="googleBtn">Войти через Google</button>
+                    <button class="googleBtn" onclick="doRegistrationGoogle()">Войти через Google</button>
                 </div>
             </div>
+
+            <script src="../JS/main.js"></script>
 
         </div>
     </div>

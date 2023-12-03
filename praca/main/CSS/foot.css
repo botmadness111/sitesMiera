@@ -1,4 +1,4 @@
-footer{
+footer {
     margin-top: 25px;
     background-color: black;
     cursor: default;
@@ -8,15 +8,16 @@ footer{
     display: grid;
     grid-template-columns: 20% auto;
     gap: 10px;
+
 }
 
-.areaToBtnLanguage{
+.areaToBtnLanguage {
     display: grid;
     justify-content: center;
     align-content: center;
 }
 
-.btnLanguage{
+.btnLanguage {
     border-radius: 25px;
     padding: 8px;
     width: 100px;
@@ -28,7 +29,7 @@ footer{
     border: 1px solid white;
 }
 
-.btnLanguage:hover{
+.btnLanguage:hover {
     scale: 1.05;
 }
 
@@ -46,38 +47,39 @@ footer{
     border-radius: 15px;
 
     justify-content: space-around;
+    align-content: center;
 }
 
-.footerInfo h3{
+.footerInfo h3 {
     color: white;
     font-weight: bold;
 }
 
-.footerInfo p{
+.footerInfo p {
     color: slategray;
 }
 
-.footerInfo p:hover{
+.footerInfo p:hover {
     color: white;
 }
 
-.linkToSites{
+.linkToSites {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
     align-content: center;
-    gap:20px;
+    gap: 20px;
 
 }
 
-.divImage img{
+.divImage img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
     background-color: #18181a;
 }
 
-.divImage img:hover{
+.divImage img:hover {
     background-color: #39393b;
     scale: 1.05;
 }

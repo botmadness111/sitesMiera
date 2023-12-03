@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../CSS/mainRoot.css">
     <link rel="stylesheet" href="../CSS/foot.css">
     <link rel="stylesheet" href="../CSS/mainPlayer.css">
+
+    <script src="../JS/registrationButtons.js"></script>
 </head>
 <body>
 <header>
@@ -19,7 +21,9 @@
                 <button class="btnNameSite"><p>🎶 Wex</p></button>
             </div>
             <div class="divHome">
-                <a href="main.html"><button class="btnHome">🏠 Главная</button></a>
+                <a href="main.html">
+                    <button class="btnHome">🏠 Главная</button>
+                </a>
             </div>
             <div class="divSearch">
                 <button class="btnSearch">🔍︎ Поиск</button>
@@ -29,22 +33,28 @@
         <div class="AreaToRegistrationArea">
             <div class="registrationArea">
                 <div>
-                    <button class="btnRegistration">Зарегестрироваться</button>
+                    <button class="btnRegistration" onclick="goRegistration()">Зарегестрироваться</button>
                 </div>
                 <div>
-                    <button class="btnEnter">Войти</button>
+                    <button class="btnEnter" onclick="goRegistration()">Войти</button>
                 </div>
             </div>
 
             <div class="navigationArea">
                 <div>
-                    <a href="#botWeek"><button class="btnRegistration">Худшее недели</button></a>
+                    <a href="#botWeek">
+                        <button class="btnRegistration">Худшее недели</button>
+                    </a>
                 </div>
                 <div>
-                    <a href="#topWeek"><button class="btnRegistration">Лучшее недели</button></a>
+                    <a href="#topWeek">
+                        <button class="btnRegistration">Лучшее недели</button>
+                    </a>
                 </div>
                 <div>
-                    <a href=""><button class="btnRegistration">Мой плейлист</button></a>
+                    <a href="">
+                        <button class="btnRegistration">Мой плейлист</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -127,7 +137,8 @@
                         <img src="../media/headup.jpg"
                              alt="обложка трека">
 
-                        <source src="../music/СЕРЕГА%20ПИРАТ%20-%20Я%20поднимаю%20свою%20голову%20вверх.mp3" type="audio/mpeg">
+                        <source src="../music/СЕРЕГА%20ПИРАТ%20-%20Я%20поднимаю%20свою%20голову%20вверх.mp3"
+                                type="audio/mpeg">
                     </section>
 
                     <section class="sectionThird">
@@ -142,8 +153,8 @@
 
                 <div id="moreSectionTop" class="moreSection">
                     <div id="areaToImageAndTextTop" class="areaToImageAndText">
-                        <div id="moreSectionImageTop" class="moreSectionImage"></div>
-                        <div id="moreSectionTextTop" class="moreSectionText"></div>
+<!--                        <div id="moreSectionImageTop" class="moreSectionImage"></div>-->
+<!--                        <div id="moreSectionTextTop" class="moreSectionText"></div>-->
                     </div>
 
                 </div>
@@ -200,7 +211,8 @@
                         <img src="../media/fly.jpg"
                              alt="обложка трека">
 
-                        <source src="../music/Серёга%20Пират%20-%20Я%20Взлетаю%20Вверх%20(prod%20LIVING%20PUFF)%20(mp3-2020.com).mp3" type="audio/mpeg">
+                        <source src="../music/Серёга%20Пират%20-%20Я%20Взлетаю%20Вверх%20(prod%20LIVING%20PUFF)%20(mp3-2020.com).mp3"
+                                type="audio/mpeg">
                     </section>
 
                     <section class="sectionThird">
@@ -215,8 +227,8 @@
 
                 <div id="moreSectionBot" class="moreSection">
                     <div id="areaToImageAndTextBot" class="areaToImageAndText">
-                        <div id="moreSectionImageBot" class="moreSectionImage"></div>
-                        <div id="moreSectionTextBot" class="moreSectionText"></div>
+<!--                        <div id="moreSectionImageBot" class="moreSectionImage"></div>-->
+<!--                        <div id="moreSectionTextBot" class="moreSectionText"></div>-->
                     </div>
 
                 </div>

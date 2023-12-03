@@ -61,6 +61,27 @@
 }
 
 
+@keyframes sectionAnimationMini {
+
+    0% {
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    100% {
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+}
+
+.startAnimationMini {
+    animation-name: sectionAnimationMini;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
 section address::before {
     margin-left: 4%;
     content: "👤";
@@ -118,7 +139,7 @@ section cite::before {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: start;
-    align-content: center;
+    align-content: start;
     gap: 10px;
 
     max-height: 300px;
@@ -130,7 +151,6 @@ section cite::before {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    align-content: space-around;
 }
 
 .moreSectionText {
@@ -141,6 +161,8 @@ section cite::before {
 }
 
 .moreSectionImage img {
+    display: grid;
+    grid-template-rows: auto;
 
     width: 50px;
     height: 50px;

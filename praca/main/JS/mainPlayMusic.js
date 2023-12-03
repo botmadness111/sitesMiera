@@ -5,18 +5,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     container.onclick = function (event) {
         let target = event.target; //куда кликнули
-        if (target.tagName === 'IMG') {
 
+        if (target.tagName === 'IMG') {
             //удалить прошлую анимацию
             if (lastSection != null) {
-                lastSection.classList = null;
+                let array = lastSection.className.split(" ");
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i].includes("startAnimation")) {
+                        array.splice(i);
+                        break;
+                    }
+                }
+                lastSection.className = array;
             }
 
             let section = target.parentElement;
             lastSection = section;
 
-            //запустить анимацию
-            section.classList.add("startAnimation");
+
+            if (target.parentNode.className === "moreSectionImage") {
+                //запустить анимацию
+                section.classList.add("startAnimationMini");
+            } else {
+                //запустить анимацию
+                section.classList.add("startAnimation");
+            }
+
 
             for (let child of section.childNodes) {
                 if (child.tagName === "SOURCE") {
@@ -24,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
                 }
             }
+
         }
     }
 });

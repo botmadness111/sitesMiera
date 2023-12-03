@@ -1,0 +1,76 @@
+header{
+}
+
+.headerArea {
+    display: grid;
+    grid-template-columns: 20% auto;
+    gap: 10px;
+
+    align-items: center;
+}
+
+.Types {
+    background-color: #090909;
+    display: grid;
+    grid-template-columns: auto;
+    border-radius: 15px;
+}
+
+.divTypesName{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+.divTypesMusic{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: start;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    grid-row-gap: 10px;
+}
+
+.btnNameSite p{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.Types button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: silver;
+}
+
+.Types .btnHome:hover {
+    transform: scale(1.03);
+    font-weight: bold;
+    color: white;
+}
+
+.findDiv{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.findMusicInput{
+    width: 500px;
+    padding: 30px;
+
+    border-radius: 60px;
+    border: none;
+
+    font-size: 25px;
+    color: silver;
+
+    background-color: #39393b;
+}
+
+.findMusicInput:hover{
+    color: white;
+    font-weight: bold;
+    scale: 1.02;
+}
