@@ -1,5 +1,5 @@
-var imgPath = "../media/";
-var musicPath = "../music/";
+var imgPath = "main/media/";
+var musicPath = "main/music/";
 
 var queueMusicTop = ["Картины", "ну где моя нога?", "мой сларк", "Качалка", "А ты?", "Хейтеры", "Вайбмен"];
 var queueAuthorTop = ["Серега пират", "Серега пират", "Серега пират", "Серега пират", "Серега пират", "Серега пират", "Серега пират", "Серега пират", "Серега пират", "Серега пират"];
@@ -26,8 +26,8 @@ function displayMusicTop() {
 
         let name = String(queueMusicTop.shift());
         let author = String(queueAuthorTop.shift());
-        let imagePath = imgPath + String(queueImageTop.shift());
-        let musicSrc = musicPath + String(queueMusicLinkTop.shift());
+        let imagePath = String(queueImageTop.shift());
+        let musicSrc = String(queueMusicLinkTop.shift());
 
         queueMusicTop.push(name);
         queueAuthorTop.push(author);
@@ -36,10 +36,10 @@ function displayMusicTop() {
 
 
         let img = document.createElement('img');
-        img.src = imagePath;
+        img.src = imgPath + imagePath;
 
         let music = document.createElement("source");
-        music.src = musicSrc;
+        music.src = musicPath + musicSrc;
         music.type = "audio/mpeg";
 
         let textName = document.createElement("text");
@@ -103,8 +103,8 @@ function displayMusicBot() {
 
         let name = String(queueMusicBot.shift());
         let author = String(queueAuthorBot.shift());
-        let imagePath = imgPath + String(queueImageBot.shift());
-        let musicSrc = musicPath + String(queueMusicLinkBot.shift());
+        let imagePath = String(queueImageBot.shift());
+        let musicSrc = String(queueMusicLinkBot.shift());
 
         queueMusicBot.push(name);
         queueAuthorBot.push(author);
@@ -113,10 +113,10 @@ function displayMusicBot() {
 
 
         let img = document.createElement('img');
-        img.src = imagePath;
+        img.src = imgPath + imagePath;
 
         let music = document.createElement("source");
-        music.src = musicSrc;
+        music.src = musicPath + musicSrc;
         music.type = "audio/mpeg";
 
         let textName = document.createElement("text");
