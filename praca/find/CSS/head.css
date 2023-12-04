@@ -44,6 +44,18 @@ header{
     color: silver;
 }
 
+@media screen and (max-width: 1000px) {
+    .Types button {
+        font-size: 26px;
+    }
+    .divTypesMusic{
+        grid-row-gap: 30px;
+    }
+    .headerArea {
+        grid-template-columns: 25% auto;
+    }
+}
+
 .Types .btnHome:hover {
     transform: scale(1.03);
     font-weight: bold;

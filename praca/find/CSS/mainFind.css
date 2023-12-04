@@ -1,3 +1,6 @@
+html {
+}
+
 main {
     margin-top: 20px;
     background-color: black;
@@ -10,54 +13,85 @@ main {
     grid-template-columns: 20% auto;
 
     grid-column-gap: 20px;
+
 }
 
 .SubscriptionDiv {
-    background-color: #090909;
-    border-radius: 15px;
 
-    color: white;
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+
+    background-color: #090909;
+    border-radius: 30px;
+}
+
+.SubscriptionContainer {
+    max-height: 200px;
+    margin-right: 3%;
+    margin-left: 3%;
 
     display: grid;
     grid-template-rows: auto auto;
-    justify-content: start;
-    justify-items: center;
-    text-align: center;
     align-content: center;
 
+    background-color: #121111;
+    border-radius: 15px;
 }
 
-.SubscriptionButtonDiv {
-    display: grid;
-    justify-content: center;
-    grid-template-rows: auto;
+.SubscriptionText {
+    color: white;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.subscriptionBtn {
+    place-self: center;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.subscriptionBtn:hover {
+    scale: 1.05;
 }
 
 .ArtistAndMusicDiv {
     display: grid;
     grid-template-columns: 20% auto;
     background-color: #090909;
-    border-radius: 40px;
+    border-radius: 30px;
 
     align-items: start;
     justify-content: space-around;
 
     grid-column-gap: 30px;
+
 }
 
 .ArtistDiv {
     display: grid;
-    grid-template-rows: 40% auto;
+    grid-template-rows: auto auto;
 
-    margin-left: 20px;
-    width: 300px;
+    max-width: 300px;
+    min-width: 200px;
+
+    margin-bottom: 15px;
 }
 
 .NameArtistDiv {
     margin-left: 30px;
+
+}
+
+.NameArtistDiv h3 {
     color: white;
     font-size: 22px;
-
 }
 
 .containerArtist {
@@ -85,22 +119,29 @@ main {
 .MusicDiv {
     display: grid;
     grid-template-rows: auto auto;
-    border-radius: 20px;
 
 }
 
 .MusicsArtistDiv {
+    display: grid;
     margin-left: 30px;
+}
+
+.MusicsArtistDiv h3 {
     color: white;
     font-size: 22px;
-
 }
 
 .containerMusics {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
 
-    justify-content: start;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+
+    justify-content: space-around;
+    margin-top: 25px;
 }
 
 .containerMusics img {
@@ -108,34 +149,72 @@ main {
     height: 50px;
 }
 
+.textMusic {
+    display: grid;
+    grid-template-rows: auto auto;
+    max-height: 50px;
+}
+
+.nameMusic {
+    margin: 0;
+}
+
+.nameAuthor {
+    margin: 0;
+}
+
 .imageAndTextMusic {
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-column-gap: 15px;
     color: white;
 
-    align-items: center;
-
+    justify-content: start;
 }
 
 .nameAuthor {
     color: silver;
 }
 
-.musicDuration {
-    margin-left: 100px;
-    color: white;
+
+@media screen and (max-width: 1000px) {
+
+    .containerArtist {
+        width: 400px;
+    }
+
+    .ArtistAndMusicDiv {
+        grid-template-columns:auto;
+        justify-content: center;
+        justify-items: center;
+    }
+
+
+    .MusicDiv {
+        justify-items: center;
+        margin-bottom: 20px;
+    }
+
+    .containerMusics {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .containerMusics img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .imageAndTextMusic {
+        font-size: 30px;
+    }
+
+    .footerDiv {
+        font-size: 18px;
+    }
+
+    .mainDiv{
+        grid-template-columns: 25% auto;
+    }
 }
 
-.subscriptionBtn {
-    place-self: center;
-    border-radius: 30px;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    width: 200px;
-    margin-bottom: 20px;
-}
-
-.subscriptionBtn:hover {
-    scale: 1.05;
-}

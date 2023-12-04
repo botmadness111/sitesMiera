@@ -1,5 +1,13 @@
-main {
+html {
+    height: 100vh;
+}
+
+body {
     background: radial-gradient(circle at 55%, #d1a1ed, #31024d 100%);
+    /*background-color: black;*/
+}
+
+main {
 }
 
 h1, p {
@@ -7,11 +15,11 @@ h1, p {
 }
 
 .mainDiv {
+    height: 98vh;
 
-    display: flex;
-    align-items: center;
+    display: grid;
+    align-content: center;
     justify-content: center;
-
 
 }
 
@@ -21,16 +29,22 @@ h1, p {
     border-radius: 10px;
 
     display: grid;
-    grid-template-rows: 25% 17.5% 11.5% 10%;
-    /*grid-template-rows: auto auto auto auto;*/
+    /*grid-template-rows: 25% 17.5% 11.5%;*/
+    grid-template-columns: auto;
+    grid-template-rows: 25% auto auto auto;
 
     justify-content: center;
     justify-items: center;
-    align-content: start;
+    align-content: stretch;
 
+    width: 47vh;
+    height: 90vh;
 
 }
 
+.registrationForm {
+    display: grid;
+}
 
 .startText {
     display: grid;
@@ -38,7 +52,6 @@ h1, p {
 
     justify-content: center;
     justify-items: center;
-
 }
 
 .registrationBoxLabels {
@@ -46,8 +59,8 @@ h1, p {
     display: grid;
     grid-template-rows: auto auto;
 
-    justify-content: center;
     align-content: center;
+    justify-content: space-around;
 
     grid-row-gap: 15px;
 }
@@ -58,7 +71,7 @@ h1, p {
     font-size: 16px;
 
     height: 50px;
-    width: 400px;
+    width: 40vh;
 
     background-color: #333333;
 }
@@ -70,6 +83,7 @@ h1, p {
 
 
 .circleBtn {
+    display: grid;
     margin-top: 15px;
 }
 
@@ -77,11 +91,12 @@ h1, p {
 
     display: grid;
 
-    grid-template-columns: auto 1%;
+    grid-template-columns: auto auto;
 
-    justify-items: center;
+    justify-content: end;
 
     grid-column-gap: 20px;
+
 
 }
 
@@ -97,7 +112,7 @@ h1, p {
     font-weight: bold;
 
     height: 55px;
-    width: 400px;
+    width: 35vh;
 
     cursor: pointer;
 }
@@ -105,8 +120,8 @@ h1, p {
 .googleBtn {
     border: none;
     border-radius: 25px;
-    width: 400px;
     height: 55px;
+    width:35vh;
 
     background-image: linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853);
     color: #fff;

@@ -5,6 +5,9 @@
     <title>Wex</title>
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../CSS/util/submitCircle.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 <main>
@@ -18,29 +21,27 @@
             </div>
 
 
-            <div class="registrationBox">
-                <form class="registrationForm">
-                    <div class="registrationBoxLabels">
-                        <label id="login">
-                            <input id="registrationInputLogin" class="registrationInput" type="text"
-                                   placeholder="Логин">
-                        </label>
+            <form class="registrationForm">
+                <div class="registrationBoxLabels">
+                    <label id="login">
+                        <input id="registrationInputLogin" class="registrationInput" type="text"
+                               placeholder="Логин">
+                    </label>
 
-                        <label id="password">
-                            <input id="registrationInputPassword" class="registrationInput" type="password"
-                                   placeholder="Пароль">
-                        </label>
-                    </div>
+                    <label id="password">
+                        <input id="registrationInputPassword" class="registrationInput" type="password"
+                               placeholder="Пароль">
+                    </label>
+                </div>
 
-                </form>
-            </div>
+            </form>
 
             <div class="memberMe">
                 <div>
                     <p>Запомнить меня</p>
                 </div>
                 <div class="circleBtn">
-                    <label>
+                    <label class="labelCircle">
                         <input type="checkbox"/>
                         <div class="circle">
                             <div class="circle--inner circle--inner__1"></div>
@@ -50,33 +51,7 @@
                             <div class="circle--inner circle--inner__5"></div>
                             <div class="circle--outer"></div>
                         </div>
-                        <svg>
-                            <defs>
-                                <filter id="gooey">
-                                    <feGaussianBlur
-                                            in="SourceGraphic"
-                                            result="blur"
-                                            stdDeviation="3"
-                                    />
-                                    <feColorMatrix
-                                            in="blur"
-                                            mode="matrix"
-                                            values="
-                                            1 0 0 0 0
-                                            0 1 0 0 0
-                                            0 0 1 0 0
-                                            0 0 0 18 -7
-                                          "
-                                            result="gooey"
-                                    />
-                                    <feBlend
-                                            in2="gooey"
-                                            in="SourceGraphic"
-                                            result="mix"
-                                    />
-                                </filter>
-                            </defs>
-                        </svg>
+
                     </label>
                 </div>
             </div>
@@ -86,7 +61,7 @@
                     <input type="submit" value="Войти" class="submitBtn" onclick="doRegistration()">
                 </div>
 
-                <hr style="width: 300px">
+                <hr>
 
                 <div class="googleBtn">
                     <button class="googleBtn" onclick="doRegistrationGoogle()">Войти через Google</button>

@@ -83,3 +83,16 @@ footer {
     background-color: #39393b;
     scale: 1.05;
 }
+
+@media screen and (max-width: 1000px) {
+
+    .btnLanguage{
+        font-size: 20px;
+        width: 120px;
+    }
+
+    .footerInfo{
+        font-size: 20px;
+    }
+
+}
