@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Wex</title>
+    <link rel="stylesheet" href="../css/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<main>
+    <div class="MainCreateDiv">
+        <div class="createTextDiv">
+            <h3>Создание нового плейлиста</h3>
+            <hr>
+        </div>
+
+        <div class="ImageAndInputsDiv">
+            <div class="ImageDiv">
+                <img id="imageBtn" src="../media/Screenshot_3.jpg" class="imageBtn" onclick="downloadImage()"/>
+                <input type="file" id="myFileInput">
+                <!--                <button class="imageBtn" onclick="downloadImage()">Добавить Обложку</button>-->
+
+            </div>
+            <script src="../js/downloadImage.js"></script>
+
+            <div class="inputsDiv">
+                <label>
+                    <input id="namePlayListInput" class="namePlayListInput" type="text"
+                           placeholder="Название плейлиста">
+                </label>
+
+                <label>
+                    <input id="descriptionPlayListInput" class="descriptionPlayListInput" type="text"
+                           placeholder="Описание плейлиста">
+                </label>
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="fastFindDiv">
+            <input id="fastFindInput" class="fastFindInput" type="text"
+                   placeholder="Быстрый поиск">
+
+            <button class="lupa">🔍︎</button>
+        </div>
+        <hr>
+
+        <div class="addMusicDiv">
+            <button class="addMusicButton" onclick="downloadMusic()">➕ Добавить аудиозапись</button>
+        </div>
+        <script src="../js/downloadMusic.js"></script>
+        <hr>
+
+        <div class="MusicsArea" id="MusicsArea">
+            <h1>🎶</h1>
+            <h3>Здесь пока нет аудозаписей</h3>
+        </div>
+
+        <hr>
+
+        <div class="saveDiv" onclick="save()">
+            <button class="saveBtn">Сохранить</button>
+        </div>
+        <script src="../js/save.js"></script>
+    </div>
+</main>
+
+</body>
+</html>
