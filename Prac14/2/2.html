@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectable List</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+
+<ul id="selectableList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+</ul>
+
+<script>
+    var list = document.getElementById('selectableList');
+
+    list.addEventListener('click', function (event) {
+
+        var isCtrlPressed = event.ctrlKey || event.metaKey; //  Ctrl или Cmd для Mac
+
+        var items = list.getElementsByTagName('li');
+
+        // Отменяем выделение у всех элементов
+        if (!isCtrlPressed) {
+            for (var i = 0; i < items.length; i++) {
+                items[i].classList.remove('selected');
+            }
+        }
+
+        event.target.classList.toggle('selected'); //переключаем с selected -> none и с none -> selected
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+.gallery {
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    justify-content: center;
+
+}
+
+.imagee img{
+    width: 100px;
+    height: 100px;
+}
+
+.main-image{
+    display: grid;
+    justify-content: center;
+}
+
+.main-image img{
+    width: 200px;
+    height: 200px;
+}

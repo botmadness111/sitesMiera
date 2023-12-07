@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Navigation</title>
+</head>
+<body>
+
+<div id="contents">
+    <!-- Динамически загруженное содержимое с ссылками -->
+    <p>Перейти по ссылке 1 <a href="https://www.google.ru/?hl=ru">ссылка 1</a></p>
+    <p>Перейти по ссылке 2<a href="https://www.google.ru/?hl=ru">ссылка 2</a></p>
+</div>
+
+<script>
+    document.getElementById('contents').addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') {
+            var confirmNavigation = confirm('Вы уверены, что хотите покинуть страницу?');
+
+            if (!confirmNavigation) {
+                event.preventDefault();
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
