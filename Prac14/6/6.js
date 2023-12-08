@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ball.style.transform = `translate(${x}px, ${y}px)`;
 
             requestAnimationFrame(animateBall);
-        }
-        else{
+        } else {
             cancelAnimationFrame(requestId);
         }
     }
@@ -36,4 +35,40 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var requestId = requestAnimationFrame(animateBall);
+
+
+    //-------------------------------------------------------------
+
+
+    const text = document.getElementById('text').textContent;
+    let startTime2;
+    const duration2 = 2000;
+
+    function animateText(timestamp) {
+        if (!startTime2) {
+            startTime2 = timestamp;
+        }
+
+        const progress2 = (timestamp - startTime2) / duration2;
+
+        if (progress2 < 1) {
+
+            const x = textFunc(progress2, text);
+            let textElem = document.getElementById('text');
+            textElem.textContent = x;
+
+            requestAnimationFrame(animateText);
+        } else {
+            cancelAnimationFrame(requestId2);
+        }
+    }
+
+    function textFunc(t, text) {
+
+        const a = text.slice(0, t * text.length + 1);
+
+        return a;
+    }
+
+    var requestId2 = requestAnimationFrame(animateText);
 });

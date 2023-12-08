@@ -22,15 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function dragOver(event) {
-        // Предотвращаем стандартное поведение браузера
         event.preventDefault();
     }
 
     function drop(event) {
-        // Предотвращаем стандартное поведение браузера
         event.preventDefault();
 
-        // Получаем данные (цену товара) из формата JSON
+        // Получаем данные (цену товара)
         const data = product.getAttribute("data-price");
 
         // Создаем новый элемент в корзине
