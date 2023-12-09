@@ -32,6 +32,8 @@ hr {
 }
 
 .createTextDiv h3 {
+    justify-content: start;
+
     display: grid;
     margin-left: 5vh;
 }
@@ -132,7 +134,7 @@ hr {
 
     background-color: #3A3A3A;
     border: 1px solid black;
-    font-size: 16px;
+    font-size: 15px;
 
     color: white;
 }

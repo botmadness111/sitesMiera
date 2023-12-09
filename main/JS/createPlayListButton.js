@@ -1,5 +1,5 @@
 function goToCreate(){
-    window.location.href = "createPlayList/Html/main.html";
+    window.location.href = "createPlayList/html/main.html";
 }
 
 function goToCreate2(){
