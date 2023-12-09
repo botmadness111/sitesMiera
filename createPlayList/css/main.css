@@ -1,6 +1,7 @@
 html {
     background-color: black;
     display: grid;
+    font-family: "Verdana", sans-serif;
 }
 
 main {
@@ -146,7 +147,6 @@ hr {
 
     justify-content: center;
     justify-items: center;
-
 }
 
 .addArea{

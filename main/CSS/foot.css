@@ -95,4 +95,16 @@ footer {
         font-size: 20px;
     }
 
+    .footerInfo{
+        grid-column-gap: 2vh;
+    }
+
+    .linkToSites{
+        margin-right: 1vh;
+    }
+
+    .companyInfo{
+        margin-left: 1vh;
+    }
+
 }

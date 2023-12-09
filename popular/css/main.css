@@ -129,6 +129,14 @@ html {
     font-size: 2vh;
 
     margin-bottom: 3vh;
+
+}
+
+.Music div{
+    display: grid;
+    justify-content: start;
+
+    min-width: 10vh;
 }
 
 .Music img {
@@ -154,6 +162,13 @@ html {
 
     background-color: #121111;
     border-radius: 3vh;
+}
+
+.SubscribersCounty div{
+    display: grid;
+    justify-content: start;
+
+    min-width: 10vh;
 }
 
 .SubscribersCounty h3 {
@@ -196,13 +211,15 @@ html {
     display: grid;
     grid-template-columns: auto;
 
-    justify-content: start;
+    justify-content: stretch;
     grid-column-gap: 2vh;
 
     margin-left: 3vh;
     font-size: 2vh;
 
     margin-bottom: 3vh;
+
+    min-width: 10vh;
 }
 
 @media screen and (max-width: 1000px) {

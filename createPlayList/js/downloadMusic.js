@@ -22,7 +22,8 @@ function downloadMusic() {
         listArea.style.marginLeft = "3vh";
         listArea.style.marginBottom = "5vh";
 
-        listArea.style.gap = "1.5vh";
+        listArea.style.rowGap = "1.5vh";
+        listArea.style.marginBottom = "0";
     }
 
 
