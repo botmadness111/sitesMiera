@@ -136,7 +136,7 @@ html {
     display: grid;
     justify-content: start;
 
-    min-width: 10vh;
+    min-width: 15vh;
 }
 
 .Music img {
@@ -168,7 +168,7 @@ html {
     display: grid;
     justify-content: start;
 
-    min-width: 10vh;
+    min-width: 15vh;
 }
 
 .SubscribersCounty h3 {
@@ -219,7 +219,7 @@ html {
 
     margin-bottom: 3vh;
 
-    min-width: 10vh;
+    min-width: 15vh;
 }
 
 @media screen and (max-width: 1000px) {
