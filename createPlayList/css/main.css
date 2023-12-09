@@ -54,6 +54,10 @@ hr {
 
 }
 
+.ImageDiv img{
+    border-radius: 2vh;
+}
+
 .imageBtn {
     width: 13vh;
     height: 13vh;

@@ -1,5 +1,13 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: "Verdana", sans-serif;
+}
+
 .MainDiv {
     display: grid;
+
+    justify-content: center;
 }
 
 .popularTextDiv {
@@ -14,21 +22,47 @@
 
     grid-template-columns: auto;
 
+
+    justify-content: center;
+
+
+    grid-row-gap: 3vh;
+
+    margin-left: 5vh;
+    margin-right: 5vh;
+
 }
 
 .ArtistDiv {
     display: grid;
     grid-template-columns: auto auto;
 
+
+    min-width: 100vh;
+    min-height: 25vh;
+    align-items: center;
+
+
     grid-column-gap: 4vh;
+
+    background-color: #121111;
+    border-radius: 3vh;
 }
 
 .imageAndNameDiv {
     display: grid;
     grid-template-rows: auto auto;
 
-    align-content: start;
+    justify-content: center;
+    align-content: space-around;
 
+    grid-row-gap: 1.2vh;
+
+}
+
+.imageAndNameDiv h2 {
+    margin: 0;
+    margin-left: 1.3vh;
 }
 
 .imageAndNameDiv img {
@@ -51,15 +85,19 @@
 
     grid-template-rows: auto auto;
     align-content: start;
+
+    font-size: 2vh;
 }
 
 .MusicsDiv {
     display: grid;
 
-    grid-template-columns: auto auto;
+    grid-template-columns: 48% auto;
     grid-template-rows: auto auto;
 
     grid-gap: 5vh;
+
+
 }
 
 .MusicsDiv img {
@@ -71,26 +109,137 @@
 .popularMusics {
     display: grid;
     grid-template-rows: auto auto auto;
-    grid-row-gap: 3vh;
+    background-color: #121111;
+    border-radius: 3vh;
+}
+
+.popularMusics h3 {
+    text-align: center;
+    margin-bottom: 4vh;
 }
 
 .Music {
     display: grid;
     grid-template-columns: auto auto;
+
+    justify-content: start;
+    grid-column-gap: 2vh;
+
+    margin-left: 3vh;
+    font-size: 2vh;
+
+    margin-bottom: 3vh;
+}
+
+.Music img {
+    border-radius: 1vh;
 }
 
 .newMusics {
     display: grid;
     grid-template-rows: auto auto auto;
-    grid-row-gap: 3vh;
+
+    background-color: #121111;
+    border-radius: 3vh;
+}
+
+.newMusics h3 {
+    text-align: center;
+    margin-bottom: 4vh;
 }
 
 .SubscribersCounty {
     display: grid;
     grid-template-rows: auto auto auto;
+
+    background-color: #121111;
+    border-radius: 3vh;
 }
+
+.SubscribersCounty h3 {
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+.textAndFlag {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    justify-content: start;
+    grid-column-gap: 2vh;
+
+    margin-left: 3vh;
+    font-size: 2vh;
+
+    margin-bottom: 3vh;
+}
+
+.textAndFlag img {
+    border-radius: 1vh;
+}
+
 
 .SubscribersCities {
     display: grid;
     grid-template-rows: auto auto auto;
+
+    background-color: #121111;
+    border-radius: 3vh;
+}
+
+.SubscribersCities h3 {
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+.SubscribersCities div {
+    display: grid;
+    grid-template-columns: auto;
+
+    justify-content: start;
+    grid-column-gap: 2vh;
+
+    margin-left: 3vh;
+    font-size: 2vh;
+
+    margin-bottom: 3vh;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .infoDiv, .popularTextDiv {
+        min-width: 10vh;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .ArtistDiv {
+        grid-template-columns: auto auto;
+
+        grid-column-gap: 0;
+
+        min-width: 46vh;
+    }
+
+    .infoArtistDiv{
+        display: block;
+    }
+
+    .infoArtistDiv div{
+        display: grid;
+        grid-template-columns: auto auto;
+
+        align-items: center;
+    }
+
+    .MusicsDiv {
+        display: grid;
+
+        grid-template-columns: auto;
+
+        grid-gap: 5vh;
+
+
+    }
 }
