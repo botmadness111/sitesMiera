@@ -222,6 +222,15 @@ html {
     min-width: 15vh;
 }
 
+.fio{
+    color: white;
+    display: grid;
+
+    justify-content: end;
+
+}
+
+
 @media screen and (max-width: 1000px) {
 
     .infoDiv, .popularTextDiv {
@@ -256,7 +265,10 @@ html {
         grid-template-columns: auto;
 
         grid-gap: 5vh;
+    }
 
-
+    .fio{
+        height: 15vh;
+        font-size: 2vh;
     }
 }

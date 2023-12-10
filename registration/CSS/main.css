@@ -133,8 +133,21 @@ h1, p {
     cursor: pointer;
 }
 
+.fio{
+    color: white;
+    display: grid;
+
+    justify-content: end;
+
+}
+
 @media screen and (max-width: 1000px){
     .startText h1{
         font-size: 4vh;
+    }
+
+    .fio{
+        height: 15vh;
+        font-size: 2vh;
     }
 }

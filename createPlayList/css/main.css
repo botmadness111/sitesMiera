@@ -191,6 +191,14 @@ hr {
     scale: 1.02;
 }
 
+.fio{
+    color: white;
+    display: grid;
+
+    justify-content: end;
+
+}
+
 
 @media screen and (max-width: 1000px) {
     .imageBtn, .namePlayListInput, .descriptionPlayListInput, .saveBtn {
@@ -200,5 +208,10 @@ hr {
     .addMusicButton {
         width: 35vh;
         font-size: 14px;
+    }
+
+    .fio{
+        height: 15vh;
+        font-size: 2vh;
     }
 }

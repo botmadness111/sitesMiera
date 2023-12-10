@@ -13,6 +13,8 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+
+
     .footerDiv {
         grid-template-columns: 25% auto;
     }
@@ -28,6 +30,19 @@ footer {
     .companyInfo{
         margin-left: 1vh;
     }
+
+    .fio{
+        font-size: 20px;
+        height: 160px;
+    }
+}
+
+.fio{
+    color: white;
+    display: grid;
+
+    justify-content: end;
+
 }
 
 .areaToBtnLanguage {
