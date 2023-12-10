@@ -132,3 +132,9 @@ h1, p {
 
     cursor: pointer;
 }
+
+@media screen and (max-width: 1000px){
+    .startText h1{
+        font-size: 4vh;
+    }
+}
